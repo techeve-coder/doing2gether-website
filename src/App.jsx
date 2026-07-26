@@ -216,6 +216,7 @@ const T = {
       eyebrow: "Contact", title: "Book a consultation.",
       copy: "Every inquiry is routed to an advisor who works your side of the table — buyer, seller, or E-2 investor. Expect a reply within one business day.",
       advisorRole: "Principal Advisor, Doing2Gether",
+      advisor2Role: "Associate Advisor, Doing2Gether",
       counties: "Miami-Dade County · Broward County · Palm Beach County",
       iAm: "I am a", roles: ["Buyer", "Seller", "E-2 Investor"],
       fullName: "Full name", email: "Email", phone: "Phone", howHelp: "How can we help?",
@@ -411,6 +412,7 @@ const T = {
       eyebrow: "Contacto", title: "Agende una consulta.",
       copy: "Cada consulta se dirige a un asesor que trabaja de su lado de la mesa — comprador, vendedor o inversionista E-2. Espere una respuesta dentro de un día hábil.",
       advisorRole: "Asesor Principal, Doing2Gether",
+      advisor2Role: "Asesora Asociada, Doing2Gether",
       counties: "Condado de Miami-Dade · Condado de Broward · Condado de Palm Beach",
       iAm: "Soy", roles: ["Comprador", "Vendedor", "Inversionista E-2"],
       fullName: "Nombre completo", email: "Correo electrónico", phone: "Teléfono", howHelp: "¿Cómo podemos ayudarle?",
@@ -906,8 +908,6 @@ function Header({ page, onNavigate }) {
               <button onClick={() => setLang("en")} className="hover:text-white transition-colors" style={{ color: lang === "en" ? "#FFFFFF" : MIST, fontWeight: lang === "en" ? 700 : 400 }}>EN</button>
               <span aria-hidden="true">/</span>
               <button onClick={() => setLang("es")} className="hover:text-white transition-colors" style={{ color: lang === "es" ? "#FFFFFF" : MIST, fontWeight: lang === "es" ? 700 : 400 }}>ES</button>
-              <span aria-hidden="true">/</span>
-              <button className="hover:text-white transition-colors">PT</button>
             </span>
           </div>
         </div>
@@ -1793,6 +1793,13 @@ function ContactPage() {
           <div>
             <p className="text-base font-medium" style={{ color: NAVY }}>Tomas Echeverria</p>
             <p className="text-sm" style={{ color: SLATE }}>{c.advisorRole}</p>
+          </div>
+        </div>
+        <div className="mt-3 flex items-center gap-3 p-4 rounded-sm border" style={{ borderColor: "rgba(14,59,54,0.12)", background: "white" }}>
+          <span className="w-11 h-11 rounded-full flex items-center justify-center font-display text-base shrink-0" style={{ background: NAVY, color: BRASS }}>MS</span>
+          <div>
+            <p className="text-base font-medium" style={{ color: NAVY }}>Maria Saad</p>
+            <p className="text-sm" style={{ color: SLATE }}>{c.advisor2Role}</p>
           </div>
         </div>
         <div className="mt-8 space-y-4 text-base" style={{ color: NAVY }}>
