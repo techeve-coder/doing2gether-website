@@ -904,6 +904,9 @@ function Header({ page, onNavigate }) {
             <a href="tel:+19548813999" className="flex items-center gap-1.5 hover:text-white transition-colors">
               <Phone className="w-3 h-3" /> 954.881.3999
             </a>
+            <a href="tel:+17863266302" className="hidden sm:flex items-center gap-1.5 hover:text-white transition-colors">
+              786.326.6302
+            </a>
             <span className="hidden md:flex items-center gap-3" style={{ color: MIST }}>
               <button onClick={() => setLang("en")} className="hover:text-white transition-colors" style={{ color: lang === "en" ? "#FFFFFF" : MIST, fontWeight: lang === "en" ? 700 : 400 }}>EN</button>
               <span aria-hidden="true">/</span>
@@ -1803,7 +1806,7 @@ function ContactPage() {
           </div>
         </div>
         <div className="mt-8 space-y-4 text-base" style={{ color: NAVY }}>
-          <p className="flex items-center gap-2.5"><Phone className="w-4 h-4" style={{ color: BRASS }} /> 954.881.3999</p>
+          <p className="flex items-center gap-2.5"><Phone className="w-4 h-4" style={{ color: BRASS }} /> 954.881.3999 <span style={{ color: SLATE }}>·</span> 786.326.6302</p>
           <p className="flex items-center gap-2.5"><Mail className="w-4 h-4" style={{ color: BRASS }} /> info@doing2gether.com</p>
           <p className="flex items-center gap-2.5"><Globe2 className="w-4 h-4" style={{ color: BRASS }} /> www.doing2gether.com</p>
           <p className="flex items-center gap-2.5"><MapPin className="w-4 h-4" style={{ color: BRASS }} /> {c.counties}</p>
