@@ -1481,7 +1481,7 @@ function BuyPage({ onNavigate }) {
         </div>
       </section>
 
-      <section style={{ background: NAVY }} className="py-16">
+      <section className="py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 grid md:grid-cols-2 gap-6">
           {LISTINGS.map((l) => <ListingCard key={l.title} l={l} />)}
         </div>
