@@ -13,7 +13,6 @@ import {
   TrendingUp,
   FileCheck2,
   Handshake,
-  Quote,
   Star,
   Check,
   Users,
@@ -39,17 +38,17 @@ const T = {
   en: {
     utility: { line: "Confidential inquiries handled within one business day" },
     nav: {
-      buy: ["Buy a", "Business"], sell: ["Sell a", "Business"], e2: "E-2 Visa Center",
+      buy: ["Buy a", "Business"], sell: ["Sell a", "Business"], e2: ["E-2 Visa", "Center"],
       international: ["International", "Buyers"], services: "Services", resources: "Resources",
       about: "About Us", contact: "Contact", schedule: "Schedule a consultation",
     },
     hero: {
       eyebrow: "South Florida M&A Advisory & E-2 Visa Acquisitions",
       title: "Acquire a profitable business in South Florida with confidence.",
-      copy: "Business brokerage specializing in profitable small and medium businesses, serving local entrepreneurs and international investors seeking U.S. residency through the E-2 Investor Visa. Doing2Gether — we do the work together, built around what you need.",
+      copy: "Business brokerage for local entrepreneurs and international E-2 visa investors. Doing2Gether — we do the work together.",
       browse: "Browse businesses for sale", valuation: "Free business valuation",
       schedule: "Schedule a consultation", e2buyers: "E-2 visa buyers",
-      license: "Licensed business brokers · Florida DBPR · Member, Florida Business Brokers Association",
+      license: "Licensed business brokers · Florida DBPR",
       ledgerTitle: "The Ledger — Recent Activity",
       ledgerNote: "Illustrative deal activity. Figures rounded; details withheld under NDA.",
     },
@@ -61,43 +60,37 @@ const T = {
     ],
     howWeWork: {
       eyebrow: "How We Do Business", title: "Doing2Gether — the name is the method.",
-      copy: "Two people do a deal at a time: a buyer and a seller, an investor and an opportunity. We built this brokerage around that fact. We don't work for a side and around the other — we do the work together with you, from the first call to the closing table, built around what you actually need and structured to get you the most value for it.",
+      copy: "We do the work together with you, from the first call to closing, built around what you need and structured for the most value.",
       cards: [
-        { title: "Together, not transactional", copy: "An advisor stays on your file end to end. No hand-offs to a call center once the contract is signed — the person who took your first call is the one at the closing table." },
-        { title: "Your needs set the brief", copy: "We start by listening — budget, timeline, risk tolerance, visa requirements, what \"sold\" needs to look like for you — and build the search or the sale around that, not around what's easiest to move." },
-        { title: "Maximizing your value", copy: "For sellers, that means a higher defensible price and cleaner terms. For buyers, it means the strongest business for the capital you're putting at risk. We measure our work by that outcome, not by how fast a file closes." },
+        { title: "Together, not transactional", copy: "One advisor stays on your file, start to finish — no hand-offs." },
+        { title: "Your needs set the brief", copy: "We build the search or the sale around your budget, timeline, and goals." },
+        { title: "Maximizing your value", copy: "The best price for sellers. The strongest business for buyers. That's how we measure success." },
       ],
     },
     whyChoose: {
       eyebrow: "Why Choose Us", title: "Every client sits on one side of the table.",
       buyerTitle: "For Buyers",
-      buyerCopy: "We don't simply send listings — we help you acquire the right business. Our advisors analyze every opportunity from an investment perspective.",
+      buyerCopy: "We help you acquire the right business, analyzed from an investment perspective.",
       buyerItems: ["Cash Flow", "Owner Earnings", "ROI", "Risk", "Growth Potential", "Financing Options", "Exit Strategy"],
       buyerCta: "Browse businesses for sale",
       sellerTitle: "For Sellers",
-      sellerCopy: "Selling your business is much more than finding a buyer. We maximize your company's value before it ever reaches the market.",
+      sellerCopy: "We maximize your company's value before it ever reaches the market.",
       sellerItems: ["Confidential process", "Higher valuation", "Qualified buyers only", "Shorter selling cycle"],
       sellerCta: "Get a free valuation",
     },
     industries: {
       eyebrow: "Featured Industries", title: "Businesses we specialize in.",
-      copy: "Among the most active and attractive industries in South Florida.",
+      copy: "The most active industries in South Florida.",
       tiers: {
         "Most Active": ["Restaurants", "Cafés", "Coffee Shops", "Pizzerias", "Beauty Salons", "Barber Shops", "Nail Salons", "Med Spas", "Fitness Centers", "Car Washes"],
         "Service & Trade": ["HVAC Companies", "Plumbing Companies", "Electrical Contractors", "Roofing", "Landscaping", "Pest Control", "Cleaning Companies", "Pool Services", "Auto Repair", "Auto Body Shops"],
         "Retail & Specialty": ["Pet Grooming", "Childcare Centers", "Senior Care", "Laundromats", "Smoke Shops", "Convenience Stores", "Liquor Stores", "Bakeries", "Ice Cream Shops", "Franchises"],
       },
     },
-    testimonialsEyebrow: "From the closing table",
-    testimonials: [
-      { quote: "We reviewed three brokerages before engaging. This was the only one that presented a valuation we could defend to our own board, and a buyer list we could actually verify.", name: "Former owner, commercial landscaping company", location: "Palm Beach County" },
-      { quote: "I was searching from São Paulo with no local network. Within eleven weeks I had a signed LOI on a business that met every E-2 threshold my attorney flagged.", name: "Investor, hospitality acquisition", location: "Relocated from Brazil" },
-      { quote: "The process was run with more discipline than the sale of my last company, and that one had an investment bank on it.", name: "Former owner, specialty distribution business", location: "Miami-Dade County" },
-    ],
-    ctaHome: { title: "Thinking about selling? Find out what your business is worth first.", copy: "A confidential valuation takes about twenty minutes and comes with no obligation to list.", button: "Request a free valuation" },
+    ctaHome: { title: "Thinking about selling?", copy: "A free valuation takes twenty minutes with no obligation.", button: "Request a free valuation" },
     buy: {
-      eyebrow: "Buy a Business", title: "Every listing includes significantly more information than competing brokerages.",
-      copy: "Investment summary, financing terms, ROI and risk metrics, and an investment score, on every opportunity we bring to market.",
+      eyebrow: "Buy a Business", title: "More information than competing brokerages, on every listing.",
+      copy: "Investment summary, financing terms, and risk metrics on every opportunity.",
       requestMemo: "Request the confidential info memo", reasonForSale: "Reason for sale",
       growth: "Growth",
       analysisEyebrow: "Financial Analysis", analysisTitle: "What we underwrite on every listing.",
@@ -107,114 +100,114 @@ const T = {
         { title: "Financial Ratios", items: ["Current Ratio", "Quick Ratio", "Debt-to-Equity", "Interest Coverage", "Inventory Turnover", "Revenue per Employee"] },
         { title: "Risk Analysis", items: ["Owner Dependence", "Customer Concentration", "Supplier Risk", "Lease Risk", "Regulatory Risk", "Market Saturation"] },
       ],
-      ctaTitle: "Not seeing the right fit yet?", ctaCopy: "Tell us your budget, industry, and timeline — we'll run a customized acquisition search, including off-market opportunities.", ctaButton: "Start a buyer consultation",
+      ctaTitle: "Not seeing the right fit?", ctaCopy: "Tell us your budget and industry — we'll run a custom search.", ctaButton: "Start a buyer consultation",
       labels: { asking: "Asking", downPmt: "Down Pmt.", financing: "Financing", grossRev: "Gross Rev.", sde: "SDE", ebitda: "EBITDA", years: "Years", employees: "Employees", leaseLeft: "Lease Left", roi: "ROI", payback: "Payback", cashOnCash: "Cash-on-Cash", dscr: "DSCR", profitability: "Profitability", risk: "Risk (lower is better)", scalability: "Scalability", ownerDependence: "Owner Dependence" },
     },
     sell: {
-      eyebrow: "Sell a Business", title: "Selling your business is much more than finding a buyer.",
-      copy: "We maximize your company's value before it reaches the market. Our confidential sales process increases valuation, attracts qualified buyers, and shortens the selling cycle.",
+      eyebrow: "Sell a Business", title: "Selling is more than finding a buyer.",
+      copy: "We maximize your company's value before it reaches the market.",
       cta: "Get a free business valuation",
       valuationEyebrow: "Business Valuation", valuationTitle: "What goes into your number.",
-      valuationCopy: "A defensible valuation grounded in comparable South Florida transactions, not a rule of thumb.",
+      valuationCopy: "A defensible valuation based on comparable South Florida sales.",
       valuationItems: ["Free Estimate", "Market Value", "SDE Multiple", "EBITDA Multiple", "Industry Comparison", "Comparable Sales", "Expected Selling Price"],
       enhanceEyebrow: "Value Enhancement", enhanceTitle: "Increase value before you list.",
-      enhanceCopy: "How to increase your company's value before it goes to market.",
+      enhanceCopy: "Simple steps that raise your company's value before it goes to market.",
       enhanceItems: ["Improve financial record-keeping", "Reduce owner dependence", "Increase recurring revenue", "Improve Google review profile", "Negotiate a lease renewal", "Document operating procedures", "Diversify the customer base", "Increase EBITDA margin"],
       processEyebrow: "Our Selling Process", processTitle: "Ten steps, run in order, every time.",
       processSteps: ["Business Valuation", "Listing Preparation", "Marketing", "Buyer Qualification", "NDA", "Financial Review", "Letter of Intent (LOI)", "Due Diligence", "Purchase Agreement", "Closing"],
       servicesEyebrow: "Seller Services", servicesTitle: "What's included, start to finish.",
       servicesItems: ["Business Valuation", "Exit Planning", "Confidential Marketing", "Buyer Screening", "Negotiation", "Deal Structuring", "Closing Coordination", "Transition Assistance", "Post-Sale Support"],
-      ctaTitle: "Ready to see what your business is worth?", ctaCopy: "A confidential valuation takes about twenty minutes of your time and comes with no obligation to list.", ctaButton: "Request a confidential valuation",
+      ctaTitle: "Ready to see what it's worth?", ctaCopy: "A free valuation takes twenty minutes with no obligation.", ctaButton: "Request a confidential valuation",
     },
     e2: {
       eyebrow: "E-2 Visa Center", title: "Buying a business for an E-2 visa? Start here.",
-      copy: "Requirements, minimum investment, active vs. passive businesses, job creation, family benefits, renewals, and realistic timelines — everything you need before you start looking.",
-      disclaimer: "We are business brokers, not immigration attorneys, and we don't file petitions. Every E-2 acquisition we structure is reviewed by your independent treaty counsel before closing.",
+      copy: "Requirements, investment minimums, and realistic timelines — everything before you start looking.",
+      disclaimer: "We're brokers, not immigration attorneys. Every E-2 deal is reviewed by your own treaty counsel before closing.",
       reqEyebrow: "Requirements", reqTitle: "What USCIS is actually looking for.",
       requirements: [
-        { title: "Treaty Country Nationality", copy: "You must hold citizenship in a country that maintains a qualifying treaty of commerce with the United States." },
-        { title: "Substantial Investment", copy: "Capital at risk must be substantial relative to total enterprise cost — most acquisitions we structure fall between $150K and $2M." },
-        { title: "Active, Operating Business", copy: "The enterprise must be a real, operating business, not passive holdings of stock, real estate, or idle funds." },
-        { title: "Marginality Test", copy: "The business must generate more than a minimal living for you and your family, or show clear capacity to." },
-        { title: "Job Creation", copy: "While not a hard minimum, a credible hiring plan strengthens a marginal-enterprise argument and future extensions." },
-        { title: "Source of Funds", copy: "Investment capital must be traceable to a lawful source — documentation here is often the difference in adjudication." },
+        { title: "Treaty Country Nationality", copy: "Citizenship in a country with a qualifying U.S. treaty of commerce." },
+        { title: "Substantial Investment", copy: "Most deals we structure fall between $150K and $2M." },
+        { title: "Active, Operating Business", copy: "A real, operating business — not passive holdings." },
+        { title: "Marginality Test", copy: "The business must support more than a minimal living." },
+        { title: "Job Creation", copy: "A credible hiring plan strengthens your case." },
+        { title: "Source of Funds", copy: "Capital must be traceable to a lawful source." },
       ],
       roadmapEyebrow: "E-2 Acquisition Roadmap", roadmapTitle: "From choosing a business to moving to the U.S.",
       roadmap: ["Choose Business", "Sign NDA", "Financial Review", "Letter of Intent (LOI)", "Due Diligence", "Purchase Agreement", "Visa Application", "Business Closing", "Move to the United States"],
       idealEyebrow: "Businesses Ideal for E-2 Investors", idealTitle: "Industries that consistently clear USCIS review.",
       industries: ["Restaurants", "Coffee Shops", "Cleaning Companies", "HVAC", "Landscaping", "Beauty Salons", "Franchises", "Pet Services", "Retail Stores", "Medical Practices"],
-      ctaTitle: "Discuss your investment profile.", ctaCopy: "Tell us your treaty country, budget, and target industry — we'll outline realistic options and timeline.", ctaButton: "Schedule an E-2 investor consultation",
+      ctaTitle: "Discuss your investment profile.", ctaCopy: "Tell us your treaty country and budget — we'll outline your options.", ctaButton: "Schedule an E-2 investor consultation",
     },
     international: {
       eyebrow: "International Buyers", title: "Buy a business in Florida from anywhere in the world.",
-      copy: "We help international entrepreneurs purchase profitable businesses throughout South Florida, coordinated end to end so you don't need a local network to close.",
+      copy: "Coordinated end to end, so you don't need a local network to close.",
       servicesEyebrow: "Services", servicesTitle: "Everything coordinated in one place.",
       services: ["Business Selection", "Investment Analysis", "E-2 Visa Coordination", "Attorney Referrals", "CPA Referrals", "Company Formation", "Bank Account Setup", "Insurance", "Commercial Leasing", "Closing Coordination", "Relocation Guidance"],
       countriesEyebrow: "Countries We Frequently Serve",
       countries: ["Argentina", "Brazil", "Mexico", "Colombia", "Chile", "Spain", "Italy", "Canada", "France", "United Kingdom"],
-      ctaTitle: "Searching from abroad?", ctaCopy: "We'll build a shortlist against your budget and treaty country, and coordinate every referral from attorney to bank.", ctaButton: "Schedule an international buyer call",
+      ctaTitle: "Searching from abroad?", ctaCopy: "We'll build a shortlist and coordinate every referral, attorney to bank.", ctaButton: "Schedule an international buyer call",
     },
     services: {
-      eyebrow: "Services", title: "Full-service support for both sides of the transaction.",
+      eyebrow: "Services", title: "Support for both sides of the transaction.",
       buyerTitle: "Buyer Services",
       buyerServices: [
-        { title: "Business Search", copy: "A customized acquisition search built around your budget, industry preference, and timeline." },
-        { title: "Financial Analysis", copy: "Investment analysis, ROI calculations, cash flow modeling, and risk assessment on every opportunity." },
-        { title: "Due Diligence Coordination", copy: "Financial, legal, operational, and commercial diligence, plus lease review, run in parallel." },
-        { title: "Financing Assistance", copy: "Introductions to SBA lenders, seller-financing structures, private lenders, and equipment financing." },
-        { title: "Immigration Coordination", copy: "Warm handoff to E-2 visa attorneys, CPAs, tax advisors, and business formation counsel." },
-        { title: "Negotiation", copy: "Price, terms, working capital, inventory, and transition planning, negotiated on your behalf." },
+        { title: "Business Search", copy: "A custom search built around your budget and timeline." },
+        { title: "Financial Analysis", copy: "ROI, cash flow, and risk assessment on every opportunity." },
+        { title: "Due Diligence Coordination", copy: "Financial, legal, and operational diligence, run in parallel." },
+        { title: "Financing Assistance", copy: "SBA lenders, seller financing, and equipment financing." },
+        { title: "Immigration Coordination", copy: "Warm handoff to E-2 attorneys, CPAs, and tax advisors." },
+        { title: "Negotiation", copy: "Price, terms, and transition, negotiated on your behalf." },
       ],
       sellerTitle: "Seller Services",
       sellerServices: ["Business Valuation", "Exit Planning", "Confidential Marketing", "Buyer Screening", "Negotiation", "Deal Structuring", "Closing Coordination", "Transition Assistance", "Post-Sale Support"],
-      ctaTitle: "Not sure where to start?", ctaCopy: "Tell us whether you're buying or selling, and we'll point you to the right advisor.", ctaButton: "Schedule a consultation",
+      ctaTitle: "Not sure where to start?", ctaCopy: "Tell us if you're buying or selling — we'll point you to the right advisor.", ctaButton: "Schedule a consultation",
     },
     resources: {
       eyebrow: "Resources", title: "Tools and guides for buyers, sellers, and investors.",
-      copy: "An instant valuation estimate, plus straight answers on the questions we hear most often.",
+      copy: "An instant valuation, plus answers to the questions we hear most.",
       toolTitle: "Business Valuation Tool",
-      toolCopy: "This calculator gives a directional range based on industry multiples of Seller's Discretionary Earnings (SDE). A formal valuation refines this using comparable sales and full financials.",
+      toolCopy: "A directional range based on industry SDE multiples. A formal valuation refines this further.",
       revenueLabel: "Estimated annual revenue", cashFlowLabel: "Estimated annual cash flow (SDE)", industryLabel: "Industry",
       yearsLabel: "Years in business", growthLabel: "YoY growth rate", years: "years",
       rangeEyebrow: "Estimated Valuation Range", midpoint: "Midpoint estimate:", multipleLabel: "Applied SDE multiple", industryLabel2: "Industry",
       formalCta: "Get a formal valuation",
-      disclaimer: "Directional estimate only, not an appraisal. Actual valuation depends on verified financials, lease terms, customer concentration, and comparable closed transactions.",
+      disclaimer: "Directional estimate only, not an appraisal.",
       knowledgeTitle: "Knowledge Center", readArticle: "Read article",
       articles: [
         { tag: "Valuation", title: "How Much Is My Business Worth?" },
-        { tag: "Valuation", title: "Understanding Seller's Discretionary Earnings (SDE)" },
-        { tag: "Valuation", title: "EBITDA vs. SDE — What Buyers Should Know" },
-        { tag: "Valuation", title: "Business Valuation Multiples by Industry" },
+        { tag: "Valuation", title: "Understanding SDE" },
+        { tag: "Valuation", title: "EBITDA vs. SDE" },
+        { tag: "Valuation", title: "Valuation Multiples by Industry" },
         { tag: "Financing", title: "How Seller Financing Works" },
-        { tag: "Financing", title: "How SBA 7(a) Loans Work for Acquisitions" },
+        { tag: "Financing", title: "How SBA 7(a) Loans Work" },
         { tag: "Buyer Guide", title: "Buying a Business vs. Starting One" },
-        { tag: "E-2 Visa", title: "Best Businesses for E-2 Visa Investors" },
-        { tag: "Buyer Guide", title: "How to Analyze a Business Before Buying" },
+        { tag: "E-2 Visa", title: "Best Businesses for E-2 Investors" },
+        { tag: "Buyer Guide", title: "How to Analyze a Business" },
         { tag: "Buyer Guide", title: "Common Mistakes First-Time Buyers Make" },
-        { tag: "Due Diligence", title: "The Due Diligence Checklist We Use on Every Deal" },
-        { tag: "Industry Guide", title: "Buying a Restaurant in South Florida" },
-        { tag: "Industry Guide", title: "Buying a Med Spa: What to Underwrite" },
-        { tag: "Industry Guide", title: "Buying a Car Wash: Equipment & Throughput" },
-        { tag: "Industry Guide", title: "Buying a Cleaning Company: Route Density" },
+        { tag: "Due Diligence", title: "Our Due Diligence Checklist" },
+        { tag: "Industry Guide", title: "Buying a Restaurant" },
+        { tag: "Industry Guide", title: "Buying a Med Spa" },
+        { tag: "Industry Guide", title: "Buying a Car Wash" },
+        { tag: "Industry Guide", title: "Buying a Cleaning Company" },
         { tag: "Market", title: "Florida Business Market Trends, 2026" },
       ],
     },
     about: {
-      eyebrow: "About Us", title: "Doing2Gether: fifteen years closing South Florida transactions, together with our clients.",
-      copy: "Doing2Gether is a licensed business brokerage serving Miami-Dade, Broward, and Palm Beach counties, with a dedicated practice advising E-2 treaty investors. The name is the method: we do the work together with you, not around you.",
+      eyebrow: "About Us", title: "Fifteen years, together with our clients.",
+      copy: "A licensed brokerage serving Miami-Dade, Broward, and Palm Beach counties, with a dedicated E-2 investor practice.",
       cards: [
         { title: "Experience", copy: "286 closed transactions since 2011, across 30+ industries." },
         { title: "Markets Served", copy: "Miami-Dade County, Broward County, and Palm Beach County." },
-        { title: "Industries", copy: "Restaurants, home services, health & wellness, retail, and logistics, among others." },
-        { title: "Success Stories", copy: "Repeat sellers and referred buyers make up the majority of our new engagements." },
+        { title: "Industries", copy: "Restaurants, home services, health & wellness, retail, and logistics." },
+        { title: "Success Stories", copy: "Most new clients come from referrals and repeat sellers." },
       ],
       networkEyebrow: "Professional Network", networkTitle: "Referrals we stand behind.",
       networkItems: ["Immigration Attorneys", "CPAs & Tax Advisors", "SBA Lenders", "Commercial Real Estate Advisors", "Insurance Brokers", "Banking Partners"],
-      ctaTitle: "Want to talk before you decide?", ctaCopy: "A short call with an advisor, no pressure, no obligation.", ctaButton: "Schedule a consultation",
+      ctaTitle: "Want to talk first?", ctaCopy: "A short call, no pressure, no obligation.", ctaButton: "Schedule a consultation",
     },
     contact: {
       eyebrow: "Contact", title: "Book a consultation.",
-      copy: "Every inquiry is routed to an advisor who works your side of the table — buyer, seller, or E-2 investor. Expect a reply within one business day.",
+      copy: "Routed to an advisor on your side of the table. Expect a reply within one business day.",
       advisorRole: "Principal Advisor, Doing2Gether",
       advisor2Role: "Associate Advisor, Doing2Gether",
       counties: "Miami-Dade County · Broward County · Palm Beach County",
@@ -223,31 +216,31 @@ const T = {
       send: "Send request", received: "Request received.", receivedCopy: "An advisor will follow up within one business day.",
     },
     footer: {
-      blurb: "Business brokerage and M&A advisory serving Miami-Dade, Broward, and Palm Beach counties, with a dedicated practice for E-2 treaty investor acquisitions. We do the work together with you, from search or valuation through closing.",
+      blurb: "Business brokerage serving Miami-Dade, Broward, and Palm Beach counties, with a dedicated E-2 investor practice.",
       buyers: "Buyers", sellers: "Sellers", resources: "Resources", company: "Company",
       buyABusiness: "Buy a Business", e2visa: "E-2 Visa Center", intlBuyers: "International Buyers",
       sellABusiness: "Sell a Business", services: "Services", resourcesLink: "Resources",
       aboutUs: "About Us", contact: "Contact",
       copyright: "© 2026 Doing2Gether Advisory LLC. Licensed business broker, State of Florida.",
-      legal: "Not a law firm and does not provide immigration or legal advice. E-2 visa eligibility is determined solely by U.S. Citizenship and Immigration Services and the U.S. Department of State.",
+      legal: "Not a law firm. E-2 eligibility is determined solely by USCIS and the U.S. Department of State.",
     },
   },
   es: {
     utility: { line: "Consultas confidenciales atendidas dentro de un día hábil" },
     nav: {
-      buy: ["Comprar un", "Negocio"], sell: ["Vender un", "Negocio"], e2: "Centro de Visa E-2",
+      buy: ["Comprar un", "Negocio"], sell: ["Vender un", "Negocio"], e2: ["Centro de", "Visa E-2"],
       international: ["Compradores", "Internacionales"], services: "Servicios", resources: "Recursos",
       about: "Nosotros", contact: "Contacto", schedule: "Agendar una consulta",
     },
     hero: {
       eyebrow: "Asesoría de Fusiones y Adquisiciones y Visa E-2 en el Sur de Florida",
       title: "Adquiera un negocio rentable en el sur de Florida con confianza.",
-      copy: "Correduría de negocios especializada en pequeñas y medianas empresas rentables, al servicio de emprendedores locales e inversionistas internacionales que buscan la residencia en EE. UU. a través de la Visa de Inversionista E-2. Doing2Gether — hacemos el trabajo juntos, a la medida de lo que usted necesita.",
+      copy: "Correduría de negocios para emprendedores locales e inversionistas E-2. Doing2Gether — hacemos el trabajo juntos.",
       browse: "Ver negocios en venta", valuation: "Valoración gratuita del negocio",
       schedule: "Agendar una consulta", e2buyers: "Compradores con visa E-2",
-      license: "Corredores de negocios con licencia · DBPR de Florida · Miembro de la Asociación de Corredores de Negocios de Florida",
+      license: "Corredores de negocios con licencia · DBPR de Florida",
       ledgerTitle: "El Libro Mayor — Actividad Reciente",
-      ledgerNote: "Actividad de operaciones ilustrativa. Cifras redondeadas; detalles reservados bajo acuerdo de confidencialidad.",
+      ledgerNote: "Actividad ilustrativa. Cifras redondeadas; detalles reservados bajo confidencialidad.",
     },
     stats: [
       { value: "$412M", label: "Valor total de transacciones" },
@@ -257,43 +250,37 @@ const T = {
     ],
     howWeWork: {
       eyebrow: "Cómo Hacemos Negocios", title: "Doing2Gether — el nombre es el método.",
-      copy: "Dos personas hacen un trato a la vez: un comprador y un vendedor, un inversionista y una oportunidad. Construimos esta correduría en torno a ese hecho. No trabajamos para un lado dejando al otro fuera — hacemos el trabajo junto a usted, desde la primera llamada hasta el cierre, a la medida de lo que realmente necesita y estructurado para obtener el mayor valor posible.",
+      copy: "Hacemos el trabajo junto a usted, desde la primera llamada hasta el cierre, a la medida de sus necesidades.",
       cards: [
-        { title: "Juntos, no transaccional", copy: "Un asesor permanece en su expediente de principio a fin. Sin transferencias a un centro de llamadas una vez firmado el contrato — la persona que atendió su primera llamada es la misma en la mesa de cierre." },
-        { title: "Sus necesidades definen el plan", copy: "Comenzamos escuchando — presupuesto, plazos, tolerancia al riesgo, requisitos de visa, cómo debe verse \"vendido\" para usted — y construimos la búsqueda o la venta en torno a eso, no en torno a lo que sea más fácil de mover." },
-        { title: "Maximizando su valor", copy: "Para los vendedores, eso significa un precio más alto y defendible, y términos más limpios. Para los compradores, significa el negocio más sólido por el capital que está arriesgando. Medimos nuestro trabajo por ese resultado, no por la rapidez con que se cierra un expediente." },
+        { title: "Juntos, no transaccional", copy: "Un asesor permanece en su expediente de principio a fin, sin transferencias." },
+        { title: "Sus necesidades definen el plan", copy: "Construimos la búsqueda o la venta según su presupuesto y metas." },
+        { title: "Maximizando su valor", copy: "El mejor precio para vendedores. El negocio más sólido para compradores." },
       ],
     },
     whyChoose: {
       eyebrow: "Por Qué Elegirnos", title: "Cada cliente se sienta de un lado de la mesa.",
       buyerTitle: "Para Compradores",
-      buyerCopy: "No simplemente enviamos listados — le ayudamos a adquirir el negocio correcto. Nuestros asesores analizan cada oportunidad desde una perspectiva de inversión.",
+      buyerCopy: "Le ayudamos a adquirir el negocio correcto, analizado desde una perspectiva de inversión.",
       buyerItems: ["Flujo de Caja", "Ingresos del Propietario", "ROI", "Riesgo", "Potencial de Crecimiento", "Opciones de Financiamiento", "Estrategia de Salida"],
       buyerCta: "Ver negocios en venta",
       sellerTitle: "Para Vendedores",
-      sellerCopy: "Vender su negocio es mucho más que encontrar un comprador. Maximizamos el valor de su empresa antes de que llegue al mercado.",
+      sellerCopy: "Maximizamos el valor de su empresa antes de que llegue al mercado.",
       sellerItems: ["Proceso confidencial", "Mayor valoración", "Solo compradores calificados", "Ciclo de venta más corto"],
       sellerCta: "Obtener una valoración gratuita",
     },
     industries: {
       eyebrow: "Industrias Destacadas", title: "Negocios en los que nos especializamos.",
-      copy: "Entre las industrias más activas y atractivas del sur de Florida.",
+      copy: "Las industrias más activas del sur de Florida.",
       tiers: {
         "Most Active": ["Restaurantes", "Cafés", "Cafeterías", "Pizzerías", "Salones de Belleza", "Barberías", "Salones de Uñas", "Spas Médicos", "Centros de Fitness", "Autolavados"],
         "Service & Trade": ["Empresas de HVAC", "Empresas de Plomería", "Contratistas Eléctricos", "Techado", "Jardinería", "Control de Plagas", "Empresas de Limpieza", "Servicios de Piscinas", "Reparación de Autos", "Talleres de Carrocería"],
         "Retail & Specialty": ["Peluquería para Mascotas", "Guarderías Infantiles", "Cuidado de Ancianos", "Lavanderías", "Tiendas de Tabaco", "Tiendas de Conveniencia", "Licorerías", "Panaderías", "Heladerías", "Franquicias"],
       },
     },
-    testimonialsEyebrow: "Desde la mesa de cierre",
-    testimonials: [
-      { quote: "Evaluamos tres correduría antes de contratar. Esta fue la única que presentó una valoración que pudimos defender ante nuestra propia junta, y una lista de compradores que realmente pudimos verificar.", name: "Ex propietario, empresa de jardinería comercial", location: "Condado de Palm Beach" },
-      { quote: "Estaba buscando desde São Paulo sin ninguna red local. En once semanas tenía una carta de intención firmada sobre un negocio que cumplía con todos los requisitos de la visa E-2 que señaló mi abogado.", name: "Inversionista, adquisición hotelera", location: "Reubicado desde Brasil" },
-      { quote: "El proceso se manejó con más disciplina que la venta de mi empresa anterior, y en esa había un banco de inversión involucrado.", name: "Ex propietario, empresa de distribución especializada", location: "Condado de Miami-Dade" },
-    ],
-    ctaHome: { title: "¿Está pensando en vender? Primero averigüe cuánto vale su negocio.", copy: "Una valoración confidencial toma unos veinte minutos y no genera ninguna obligación de listar su negocio.", button: "Solicitar una valoración gratuita" },
+    ctaHome: { title: "¿Piensa vender?", copy: "Una valoración gratuita toma veinte minutos, sin obligación.", button: "Solicitar una valoración gratuita" },
     buy: {
-      eyebrow: "Comprar un Negocio", title: "Cada listado incluye considerablemente más información que las correduría de la competencia.",
-      copy: "Resumen de inversión, condiciones de financiamiento, métricas de ROI y riesgo, y una puntuación de inversión, en cada oportunidad que llevamos al mercado.",
+      eyebrow: "Comprar un Negocio", title: "Más información que la competencia, en cada listado.",
+      copy: "Resumen de inversión, financiamiento y métricas de riesgo en cada oportunidad.",
       requestMemo: "Solicitar el memorando confidencial", reasonForSale: "Motivo de venta",
       growth: "Crecimiento",
       analysisEyebrow: "Análisis Financiero", analysisTitle: "Lo que evaluamos en cada listado.",
@@ -303,114 +290,114 @@ const T = {
         { title: "Razones Financieras", items: ["Razón Corriente", "Prueba Ácida", "Deuda-Capital", "Cobertura de Intereses", "Rotación de Inventario", "Ingresos por Empleado"] },
         { title: "Análisis de Riesgo", items: ["Dependencia del Propietario", "Concentración de Clientes", "Riesgo de Proveedores", "Riesgo de Arrendamiento", "Riesgo Regulatorio", "Saturación del Mercado"] },
       ],
-      ctaTitle: "¿Aún no encuentra el negocio ideal?", ctaCopy: "Cuéntenos su presupuesto, industria y plazo — realizaremos una búsqueda de adquisición personalizada, incluyendo oportunidades fuera del mercado.", ctaButton: "Iniciar una consulta para compradores",
+      ctaTitle: "¿Aún no encuentra su negocio?", ctaCopy: "Cuéntenos su presupuesto e industria — haremos una búsqueda personalizada.", ctaButton: "Iniciar una consulta para compradores",
       labels: { asking: "Precio", downPmt: "Pago Inicial", financing: "Financiamiento", grossRev: "Ingresos Brutos", sde: "SDE", ebitda: "EBITDA", years: "Años", employees: "Empleados", leaseLeft: "Arrendamiento Restante", roi: "ROI", payback: "Recuperación", cashOnCash: "Retorno sobre Efectivo", dscr: "DSCR", profitability: "Rentabilidad", risk: "Riesgo (menor es mejor)", scalability: "Escalabilidad", ownerDependence: "Dependencia del Propietario" },
     },
     sell: {
-      eyebrow: "Vender un Negocio", title: "Vender su negocio es mucho más que encontrar un comprador.",
-      copy: "Maximizamos el valor de su empresa antes de que llegue al mercado. Nuestro proceso de venta confidencial aumenta la valoración, atrae compradores calificados y acorta el ciclo de venta.",
+      eyebrow: "Vender un Negocio", title: "Vender es más que encontrar un comprador.",
+      copy: "Maximizamos el valor de su empresa antes de que llegue al mercado.",
       cta: "Obtener una valoración gratuita del negocio",
       valuationEyebrow: "Valoración del Negocio", valuationTitle: "Qué compone su cifra.",
-      valuationCopy: "Una valoración defendible basada en transacciones comparables del sur de Florida, no en una regla general.",
+      valuationCopy: "Una valoración defendible basada en ventas comparables del sur de Florida.",
       valuationItems: ["Estimación Gratuita", "Valor de Mercado", "Múltiplo de SDE", "Múltiplo de EBITDA", "Comparación por Industria", "Ventas Comparables", "Precio de Venta Esperado"],
       enhanceEyebrow: "Aumento de Valor", enhanceTitle: "Aumente el valor antes de listar.",
-      enhanceCopy: "Cómo aumentar el valor de su empresa antes de salir al mercado.",
+      enhanceCopy: "Pasos simples que aumentan el valor antes de salir al mercado.",
       enhanceItems: ["Mejorar los registros financieros", "Reducir la dependencia del propietario", "Aumentar los ingresos recurrentes", "Mejorar el perfil de reseñas de Google", "Negociar la renovación del arrendamiento", "Documentar los procedimientos operativos", "Diversificar la base de clientes", "Aumentar el margen EBITDA"],
       processEyebrow: "Nuestro Proceso de Venta", processTitle: "Diez pasos, en orden, siempre.",
       processSteps: ["Valoración del Negocio", "Preparación del Listado", "Marketing", "Calificación de Compradores", "Acuerdo de Confidencialidad", "Revisión Financiera", "Carta de Intención (LOI)", "Debida Diligencia", "Contrato de Compraventa", "Cierre"],
       servicesEyebrow: "Servicios para Vendedores", servicesTitle: "Qué está incluido, de principio a fin.",
       servicesItems: ["Valoración del Negocio", "Planificación de Salida", "Marketing Confidencial", "Selección de Compradores", "Negociación", "Estructuración del Trato", "Coordinación del Cierre", "Asistencia en la Transición", "Soporte Posventa"],
-      ctaTitle: "¿Listo para saber cuánto vale su negocio?", ctaCopy: "Una valoración confidencial toma unos veinte minutos de su tiempo y no genera ninguna obligación de listar.", ctaButton: "Solicitar una valoración confidencial",
+      ctaTitle: "¿Listo para saber cuánto vale?", ctaCopy: "Una valoración gratuita toma veinte minutos, sin obligación.", ctaButton: "Solicitar una valoración confidencial",
     },
     e2: {
       eyebrow: "Centro de Visa E-2", title: "¿Va a comprar un negocio para una visa E-2? Comience aquí.",
-      copy: "Requisitos, inversión mínima, negocios activos frente a pasivos, creación de empleo, beneficios familiares, renovaciones y plazos realistas — todo lo que necesita antes de empezar a buscar.",
-      disclaimer: "Somos corredores de negocios, no abogados de inmigración, y no presentamos peticiones. Cada adquisición E-2 que estructuramos es revisada por su propio abogado de tratados antes del cierre.",
+      copy: "Requisitos, inversión mínima y plazos realistas — todo antes de empezar a buscar.",
+      disclaimer: "Somos corredores, no abogados de inmigración. Cada trato E-2 lo revisa su propio abogado de tratados antes del cierre.",
       reqEyebrow: "Requisitos", reqTitle: "Lo que realmente busca USCIS.",
       requirements: [
-        { title: "Nacionalidad de País con Tratado", copy: "Debe tener la ciudadanía de un país que mantenga un tratado de comercio calificado con los Estados Unidos." },
-        { title: "Inversión Sustancial", copy: "El capital en riesgo debe ser sustancial en relación con el costo total de la empresa — la mayoría de las adquisiciones que estructuramos están entre $150,000 y $2,000,000." },
-        { title: "Negocio Activo y Operativo", copy: "La empresa debe ser un negocio real y operativo, no una tenencia pasiva de acciones, bienes raíces o fondos inactivos." },
-        { title: "Prueba de Marginalidad", copy: "El negocio debe generar más que un ingreso mínimo para usted y su familia, o demostrar una capacidad clara de hacerlo." },
-        { title: "Creación de Empleo", copy: "Aunque no es un mínimo estricto, un plan de contratación creíble fortalece el argumento frente a una empresa marginal y futuras extensiones." },
-        { title: "Origen de los Fondos", copy: "El capital de inversión debe poder rastrearse hasta una fuente lícita — la documentación aquí suele marcar la diferencia en la resolución del caso." },
+        { title: "Nacionalidad de País con Tratado", copy: "Ciudadanía de un país con tratado de comercio calificado con EE. UU." },
+        { title: "Inversión Sustancial", copy: "La mayoría de los tratos que estructuramos están entre $150,000 y $2,000,000." },
+        { title: "Negocio Activo y Operativo", copy: "Un negocio real y operativo, no una tenencia pasiva." },
+        { title: "Prueba de Marginalidad", copy: "El negocio debe sostener más que un ingreso mínimo." },
+        { title: "Creación de Empleo", copy: "Un plan de contratación creíble fortalece su caso." },
+        { title: "Origen de los Fondos", copy: "El capital debe poder rastrearse hasta una fuente lícita." },
       ],
       roadmapEyebrow: "Ruta de Adquisición E-2", roadmapTitle: "Desde elegir un negocio hasta mudarse a Estados Unidos.",
       roadmap: ["Elegir el Negocio", "Firmar Acuerdo de Confidencialidad", "Revisión Financiera", "Carta de Intención (LOI)", "Debida Diligencia", "Contrato de Compraventa", "Solicitud de Visa", "Cierre del Negocio", "Mudanza a Estados Unidos"],
       idealEyebrow: "Negocios Ideales para Inversionistas E-2", idealTitle: "Industrias que consistentemente superan la revisión de USCIS.",
       industries: ["Restaurantes", "Cafeterías", "Empresas de Limpieza", "HVAC", "Jardinería", "Salones de Belleza", "Franquicias", "Servicios para Mascotas", "Tiendas Minoristas", "Consultorios Médicos"],
-      ctaTitle: "Analice su perfil de inversión.", ctaCopy: "Cuéntenos su país de tratado, presupuesto e industria objetivo — le explicaremos opciones realistas y el plazo estimado.", ctaButton: "Agendar una consulta para inversionistas E-2",
+      ctaTitle: "Analice su perfil de inversión.", ctaCopy: "Cuéntenos su país de tratado y presupuesto — le explicaremos sus opciones.", ctaButton: "Agendar una consulta para inversionistas E-2",
     },
     international: {
       eyebrow: "Compradores Internacionales", title: "Compre un negocio en Florida desde cualquier parte del mundo.",
-      copy: "Ayudamos a emprendedores internacionales a comprar negocios rentables en todo el sur de Florida, coordinado de principio a fin para que no necesite una red de contactos local para cerrar.",
+      copy: "Coordinado de principio a fin, sin necesitar una red de contactos local.",
       servicesEyebrow: "Servicios", servicesTitle: "Todo coordinado en un solo lugar.",
       services: ["Selección del Negocio", "Análisis de Inversión", "Coordinación de Visa E-2", "Referencias de Abogados", "Referencias de Contadores", "Constitución de Empresa", "Apertura de Cuenta Bancaria", "Seguros", "Arrendamiento Comercial", "Coordinación del Cierre", "Orientación para la Reubicación"],
       countriesEyebrow: "Países que Atendemos con Frecuencia",
       countries: ["Argentina", "Brasil", "México", "Colombia", "Chile", "España", "Italia", "Canadá", "Francia", "Reino Unido"],
-      ctaTitle: "¿Está buscando desde el extranjero?", ctaCopy: "Elaboraremos una lista corta según su presupuesto y país de tratado, y coordinaremos cada referencia, desde el abogado hasta el banco.", ctaButton: "Agendar una llamada para compradores internacionales",
+      ctaTitle: "¿Buscando desde el extranjero?", ctaCopy: "Elaboraremos una lista corta y coordinaremos cada referencia, del abogado al banco.", ctaButton: "Agendar una llamada para compradores internacionales",
     },
     services: {
-      eyebrow: "Servicios", title: "Soporte integral para ambos lados de la transacción.",
+      eyebrow: "Servicios", title: "Soporte para ambos lados de la transacción.",
       buyerTitle: "Servicios para Compradores",
       buyerServices: [
-        { title: "Búsqueda de Negocios", copy: "Una búsqueda de adquisición personalizada según su presupuesto, industria preferida y plazo." },
-        { title: "Análisis Financiero", copy: "Análisis de inversión, cálculos de ROI, modelado de flujo de caja y evaluación de riesgo en cada oportunidad." },
-        { title: "Coordinación de Debida Diligencia", copy: "Diligencia financiera, legal, operativa y comercial, además de revisión de arrendamiento, todo en paralelo." },
-        { title: "Asistencia de Financiamiento", copy: "Presentaciones con prestamistas SBA, estructuras de financiamiento del vendedor, prestamistas privados y financiamiento de equipos." },
-        { title: "Coordinación Migratoria", copy: "Presentación directa con abogados de visa E-2, contadores, asesores fiscales y asesoría en constitución de empresas." },
-        { title: "Negociación", copy: "Precio, condiciones, capital de trabajo, inventario y planificación de la transición, negociados en su nombre." },
+        { title: "Búsqueda de Negocios", copy: "Una búsqueda personalizada según su presupuesto y plazo." },
+        { title: "Análisis Financiero", copy: "ROI, flujo de caja y evaluación de riesgo en cada oportunidad." },
+        { title: "Coordinación de Debida Diligencia", copy: "Diligencia financiera, legal y operativa, en paralelo." },
+        { title: "Asistencia de Financiamiento", copy: "Prestamistas SBA, financiamiento del vendedor y de equipos." },
+        { title: "Coordinación Migratoria", copy: "Presentación con abogados de visa E-2, contadores y asesores." },
+        { title: "Negociación", copy: "Precio, condiciones y transición, negociados en su nombre." },
       ],
       sellerTitle: "Servicios para Vendedores",
       sellerServices: ["Valoración del Negocio", "Planificación de Salida", "Marketing Confidencial", "Selección de Compradores", "Negociación", "Estructuración del Trato", "Coordinación del Cierre", "Asistencia en la Transición", "Soporte Posventa"],
-      ctaTitle: "¿No está seguro por dónde empezar?", ctaCopy: "Cuéntenos si está comprando o vendiendo, y lo dirigiremos al asesor correcto.", ctaButton: "Agendar una consulta",
+      ctaTitle: "¿No sabe por dónde empezar?", ctaCopy: "Díganos si compra o vende — lo dirigiremos al asesor correcto.", ctaButton: "Agendar una consulta",
     },
     resources: {
       eyebrow: "Recursos", title: "Herramientas y guías para compradores, vendedores e inversionistas.",
-      copy: "Una estimación de valoración instantánea, además de respuestas claras a las preguntas que más escuchamos.",
+      copy: "Una valoración instantánea, y respuestas a las preguntas más comunes.",
       toolTitle: "Herramienta de Valoración de Negocios",
-      toolCopy: "Esta calculadora ofrece un rango orientativo basado en múltiplos de la industria sobre las Ganancias Discrecionales del Vendedor (SDE). Una valoración formal refina esto usando ventas comparables y estados financieros completos.",
+      toolCopy: "Un rango orientativo según múltiplos de SDE. Una valoración formal lo refina.",
       revenueLabel: "Ingresos anuales estimados", cashFlowLabel: "Flujo de caja anual estimado (SDE)", industryLabel: "Industria",
       yearsLabel: "Años en operación", growthLabel: "Tasa de crecimiento interanual", years: "años",
       rangeEyebrow: "Rango de Valoración Estimado", midpoint: "Estimación media:", multipleLabel: "Múltiplo de SDE aplicado", industryLabel2: "Industria",
       formalCta: "Obtener una valoración formal",
-      disclaimer: "Estimación orientativa únicamente, no es una tasación. La valoración real depende de los estados financieros verificados, condiciones de arrendamiento, concentración de clientes y transacciones comparables cerradas.",
+      disclaimer: "Estimación orientativa únicamente, no es una tasación.",
       knowledgeTitle: "Centro de Conocimiento", readArticle: "Leer artículo",
       articles: [
         { tag: "Valoración", title: "¿Cuánto Vale Mi Negocio?" },
-        { tag: "Valoración", title: "Entendiendo las Ganancias Discrecionales del Vendedor (SDE)" },
-        { tag: "Valoración", title: "EBITDA vs. SDE — Lo Que Deben Saber los Compradores" },
-        { tag: "Valoración", title: "Múltiplos de Valoración de Negocios por Industria" },
+        { tag: "Valoración", title: "Entendiendo el SDE" },
+        { tag: "Valoración", title: "EBITDA vs. SDE" },
+        { tag: "Valoración", title: "Múltiplos de Valoración por Industria" },
         { tag: "Financiamiento", title: "Cómo Funciona el Financiamiento del Vendedor" },
-        { tag: "Financiamiento", title: "Cómo Funcionan los Préstamos SBA 7(a) para Adquisiciones" },
-        { tag: "Guía del Comprador", title: "Comprar un Negocio vs. Comenzar Uno Nuevo" },
-        { tag: "Visa E-2", title: "Los Mejores Negocios para Inversionistas de Visa E-2" },
-        { tag: "Guía del Comprador", title: "Cómo Analizar un Negocio Antes de Comprarlo" },
-        { tag: "Guía del Comprador", title: "Errores Comunes de los Compradores Primerizos" },
-        { tag: "Debida Diligencia", title: "La Lista de Verificación de Debida Diligencia que Usamos en Cada Trato" },
-        { tag: "Guía de Industria", title: "Comprar un Restaurante en el Sur de Florida" },
-        { tag: "Guía de Industria", title: "Comprar un Spa Médico: Qué Evaluar" },
-        { tag: "Guía de Industria", title: "Comprar un Autolavado: Equipos y Capacidad" },
-        { tag: "Guía de Industria", title: "Comprar una Empresa de Limpieza: Densidad de Rutas" },
-        { tag: "Mercado", title: "Tendencias del Mercado de Negocios en Florida, 2026" },
+        { tag: "Financiamiento", title: "Cómo Funcionan los Préstamos SBA 7(a)" },
+        { tag: "Guía del Comprador", title: "Comprar un Negocio vs. Comenzar Uno" },
+        { tag: "Visa E-2", title: "Los Mejores Negocios para Inversionistas E-2" },
+        { tag: "Guía del Comprador", title: "Cómo Analizar un Negocio" },
+        { tag: "Guía del Comprador", title: "Errores Comunes de Compradores Primerizos" },
+        { tag: "Debida Diligencia", title: "Nuestra Lista de Verificación" },
+        { tag: "Guía de Industria", title: "Comprar un Restaurante" },
+        { tag: "Guía de Industria", title: "Comprar un Spa Médico" },
+        { tag: "Guía de Industria", title: "Comprar un Autolavado" },
+        { tag: "Guía de Industria", title: "Comprar una Empresa de Limpieza" },
+        { tag: "Mercado", title: "Tendencias del Mercado en Florida, 2026" },
       ],
     },
     about: {
-      eyebrow: "Nosotros", title: "Doing2Gether: quince años cerrando transacciones en el sur de Florida, junto a nuestros clientes.",
-      copy: "Doing2Gether es una correduría de negocios con licencia que atiende los condados de Miami-Dade, Broward y Palm Beach, con una práctica dedicada a asesorar a inversionistas de tratado E-2. El nombre es el método: hacemos el trabajo junto a usted, no a su alrededor.",
+      eyebrow: "Nosotros", title: "Quince años, junto a nuestros clientes.",
+      copy: "Correduría con licencia en Miami-Dade, Broward y Palm Beach, con práctica dedicada a inversionistas E-2.",
       cards: [
         { title: "Experiencia", copy: "286 transacciones cerradas desde 2011, en más de 30 industrias." },
         { title: "Mercados Atendidos", copy: "Condado de Miami-Dade, Condado de Broward y Condado de Palm Beach." },
-        { title: "Industrias", copy: "Restaurantes, servicios para el hogar, salud y bienestar, comercio minorista y logística, entre otras." },
-        { title: "Casos de Éxito", copy: "Vendedores recurrentes y compradores referidos conforman la mayoría de nuestros nuevos clientes." },
+        { title: "Industrias", copy: "Restaurantes, servicios para el hogar, salud, comercio minorista y logística." },
+        { title: "Casos de Éxito", copy: "La mayoría de nuestros clientes llegan por referencia." },
       ],
       networkEyebrow: "Red Profesional", networkTitle: "Referencias en las que confiamos.",
       networkItems: ["Abogados de Inmigración", "Contadores y Asesores Fiscales", "Prestamistas SBA", "Asesores de Bienes Raíces Comerciales", "Corredores de Seguros", "Socios Bancarios"],
-      ctaTitle: "¿Quiere conversar antes de decidir?", ctaCopy: "Una breve llamada con un asesor, sin presión, sin obligación.", ctaButton: "Agendar una consulta",
+      ctaTitle: "¿Quiere conversar primero?", ctaCopy: "Una breve llamada, sin presión, sin obligación.", ctaButton: "Agendar una consulta",
     },
     contact: {
       eyebrow: "Contacto", title: "Agende una consulta.",
-      copy: "Cada consulta se dirige a un asesor que trabaja de su lado de la mesa — comprador, vendedor o inversionista E-2. Espere una respuesta dentro de un día hábil.",
+      copy: "Se dirige a un asesor de su lado de la mesa. Espere respuesta en un día hábil.",
       advisorRole: "Asesor Principal, Doing2Gether",
       advisor2Role: "Asesora Asociada, Doing2Gether",
       counties: "Condado de Miami-Dade · Condado de Broward · Condado de Palm Beach",
@@ -419,28 +406,28 @@ const T = {
       send: "Enviar solicitud", received: "Solicitud recibida.", receivedCopy: "Un asesor le dará seguimiento dentro de un día hábil.",
     },
     footer: {
-      blurb: "Correduría de negocios y asesoría de fusiones y adquisiciones que atiende los condados de Miami-Dade, Broward y Palm Beach, con una práctica dedicada a adquisiciones de inversionistas de tratado E-2. Hacemos el trabajo junto a usted, desde la búsqueda o valoración hasta el cierre.",
+      blurb: "Correduría de negocios en Miami-Dade, Broward y Palm Beach, con práctica dedicada a inversionistas E-2.",
       buyers: "Compradores", sellers: "Vendedores", resources: "Recursos", company: "Empresa",
       buyABusiness: "Comprar un Negocio", e2visa: "Centro de Visa E-2", intlBuyers: "Compradores Internacionales",
       sellABusiness: "Vender un Negocio", services: "Servicios", resourcesLink: "Recursos",
       aboutUs: "Nosotros", contact: "Contacto",
       copyright: "© 2026 Doing2Gether Advisory LLC. Corredor de negocios con licencia, Estado de Florida.",
-      legal: "No somos un bufete de abogados y no brindamos asesoría legal o migratoria. La elegibilidad para la visa E-2 la determina exclusivamente el Servicio de Ciudadanía e Inmigración de EE. UU. y el Departamento de Estado de EE. UU.",
+      legal: "No somos un bufete de abogados. La elegibilidad E-2 la determina exclusivamente USCIS y el Departamento de Estado de EE. UU.",
     },
   },
 };
 
 
-const NAVY = "#0E3B36";
-const NAVY_LIGHT = "#12433D";
-const PAPER = "#F6F3EC";
-const PAPER_DIM = "#EFE7D8";
-const BRASS = "#C1613F";
-const BRASS_LIGHT = "#D2794F";
-const INK = "#1E2B27";
-const SLATE = "#5C6B67";
-const MIST = "#93A19C";
-const SAND = "#E4D9C5";
+const NAVY = "#21254A";
+const NAVY_LIGHT = "#2A3060";
+const PAPER = "#F7F4EE";
+const PAPER_DIM = "#EFEBDD";
+const BRASS = "#D98E3F";
+const BRASS_LIGHT = "#E4A15E";
+const INK = "#21223D";
+const SLATE = "#5B5F72";
+const MIST = "#9BA0C2";
+const SAND = "#C9CEE8";
 const GOOD = "#4C8B6D";
 const GOOD_LIGHT = "#7FC29D";
 const RISK = "#B23A2E";
@@ -806,7 +793,7 @@ function ScoreBar({ label, value, invert }) {
     <div>
       <div className="flex items-center justify-between mb-1">
         <span className="font-mono2 text-[12px] uppercase tracking-wide" style={{ color: MIST }}>{label}</span>
-        <span className="font-mono2 text-[12px]" style={{ color: "#F6F3EC" }}>{value}</span>
+        <span className="font-mono2 text-[12px]" style={{ color: "#F7F4EE" }}>{value}</span>
       </div>
       <div className="h-1.5 rounded-full bg-white/10 overflow-hidden">
         <div className="h-full rounded-full" style={{ width: `${value}%`, background: color }} />
@@ -829,7 +816,7 @@ function CardShell({ children, className = "" }) {
   return (
     <div
       className={`rounded-sm border p-7 bg-white transition-colors ${className}`}
-      style={{ borderColor: "rgba(14,59,54,0.1)" }}
+      style={{ borderColor: "rgba(33,37,74,0.1)" }}
     >
       {children}
     </div>
@@ -856,7 +843,7 @@ function CTABand({ title, copy, buttonLabel, onNavigate, to }) {
       <div className="rounded-sm px-8 py-14 lg:px-16 lg:py-16 text-center" style={{ background: NAVY }}>
         <Handshake className="w-8 h-8 mx-auto" style={{ color: BRASS }} strokeWidth={1.5} />
         <h2 className="font-display text-4xl lg:text-5xl text-white mt-6 max-w-2xl mx-auto">{title}</h2>
-        <p className="mt-4 max-w-lg mx-auto" style={{ color: "#C3D0CB" }}>{copy}</p>
+        <p className="mt-4 max-w-lg mx-auto" style={{ color: "#C7CBE8" }}>{copy}</p>
         <button
           onClick={() => onNavigate(to)}
           className="inline-flex items-center gap-2 font-medium text-base px-7 py-3.5 rounded-sm mt-8 transition-colors"
@@ -896,7 +883,7 @@ function Header({ page, onNavigate }) {
   ];
 
   return (
-    <header className="sticky top-0 z-40 backdrop-blur border-b" style={{ background: "rgba(246,243,236,0.95)", borderColor: "rgba(14,59,54,0.1)" }}>
+    <header className="sticky top-0 z-40 backdrop-blur border-b" style={{ background: "rgba(247,244,238,0.95)", borderColor: "rgba(33,37,74,0.1)" }}>
       <div style={{ background: NAVY, color: SAND }} className="text-sm">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 h-9 flex items-center justify-between font-mono2 tracking-wide">
           <span className="hidden sm:inline">{t.utility.line}</span>
@@ -956,7 +943,7 @@ function Header({ page, onNavigate }) {
       </div>
 
       {menuOpen && (
-        <div className="lg:hidden border-t px-6 py-5 flex flex-col gap-1 max-h-[75vh] overflow-y-auto" style={{ borderColor: "rgba(14,59,54,0.1)", background: PAPER }}>
+        <div className="lg:hidden border-t px-6 py-5 flex flex-col gap-1 max-h-[75vh] overflow-y-auto" style={{ borderColor: "rgba(33,37,74,0.1)", background: PAPER }}>
           {[...navPrimary, ...navSecondary].map((item) => (
             <button key={item.key} onClick={() => go(item.key)} className="text-left text-base py-2.5" style={{ color: INK }}>
               {Array.isArray(item.label) ? item.label.join(" ") : item.label}
@@ -1041,14 +1028,14 @@ function HomePage({ onNavigate }) {
             <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl leading-[1.08] mt-5 max-w-xl">
               {t.hero.title}
             </h1>
-            <p className="mt-6 text-xl max-w-lg leading-relaxed" style={{ color: "#C3D0CB" }}>
+            <p className="mt-6 text-xl max-w-lg leading-relaxed" style={{ color: "#C7CBE8" }}>
               {t.hero.copy}
             </p>
             <div className="mt-9 flex flex-wrap gap-4">
               <button onClick={() => onNavigate("buy")} className="inline-flex items-center gap-2 font-medium text-base px-6 py-3.5 rounded-sm transition-colors" style={{ background: BRASS, color: NAVY }}>
                 {t.hero.browse} <ArrowRight className="w-4 h-4" />
               </button>
-              <button onClick={() => onNavigate("resources")} className="inline-flex items-center gap-2 border text-base px-6 py-3.5 rounded-sm transition-colors" style={{ borderColor: "rgba(246,243,236,0.3)", color: PAPER }}>
+              <button onClick={() => onNavigate("resources")} className="inline-flex items-center gap-2 border text-base px-6 py-3.5 rounded-sm transition-colors" style={{ borderColor: "rgba(247,244,238,0.3)", color: PAPER }}>
                 {t.hero.valuation}
               </button>
             </div>
@@ -1092,7 +1079,7 @@ function HomePage({ onNavigate }) {
         </div>
       </section>
 
-      <section className="border-b bg-white" style={{ borderColor: "rgba(14,59,54,0.1)" }}>
+      <section className="border-b bg-white" style={{ borderColor: "rgba(33,37,74,0.1)" }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-10 py-10 grid grid-cols-2 lg:grid-cols-4 gap-8">
           {t.stats.map((s) => (
             <div key={s.label}>
@@ -1128,11 +1115,11 @@ function HomePage({ onNavigate }) {
       </section>
 
       {/* Why Choose Us */}
-      <section className="max-w-7xl mx-auto px-6 lg:px-10 py-20 lg:py-28" style={{ borderTop: "1px solid rgba(14,59,54,0.1)" }}>
+      <section className="max-w-7xl mx-auto px-6 lg:px-10 py-20 lg:py-28" style={{ borderTop: "1px solid rgba(33,37,74,0.1)" }}>
         <Eyebrow>{t.whyChoose.eyebrow}</Eyebrow>
         <h2 className="font-display text-4xl lg:text-5xl mt-4" style={{ color: NAVY }}>{t.whyChoose.title}</h2>
         <div className="grid md:grid-cols-2 gap-6 mt-12">
-          <CardShell className="hover:border-[#C1613F]/60">
+          <CardShell className="hover:border-[#D98E3F]/60">
             <Building2 className="w-6 h-6" style={{ color: BRASS }} strokeWidth={1.5} />
             <h3 className="font-display text-2xl mt-5" style={{ color: NAVY }}>{t.whyChoose.buyerTitle}</h3>
             <p className="text-base leading-relaxed mt-2" style={{ color: SLATE }}>
@@ -1145,7 +1132,7 @@ function HomePage({ onNavigate }) {
               {t.whyChoose.buyerCta} <ArrowUpRight className="w-4 h-4" />
             </button>
           </CardShell>
-          <CardShell className="hover:border-[#C1613F]/60">
+          <CardShell className="hover:border-[#D98E3F]/60">
             <TrendingUp className="w-6 h-6" style={{ color: BRASS }} strokeWidth={1.5} />
             <h3 className="font-display text-2xl mt-5" style={{ color: NAVY }}>{t.whyChoose.sellerTitle}</h3>
             <p className="text-base leading-relaxed mt-2" style={{ color: SLATE }}>
@@ -1173,29 +1160,12 @@ function HomePage({ onNavigate }) {
                 <p className="font-mono2 text-[12px] tracking-[0.15em] uppercase" style={{ color: BRASS }}>{tier}</p>
                 <ul className="mt-4 space-y-2">
                   {t.industries.tiers[tier].map((item) => (
-                    <li key={item} className="text-base" style={{ color: "#D7E0DB" }}>{item}</li>
+                    <li key={item} className="text-base" style={{ color: "#CDD1EA" }}>{item}</li>
                   ))}
                 </ul>
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="max-w-7xl mx-auto px-6 lg:px-10 py-20 lg:py-28">
-        <Eyebrow>{t.testimonialsEyebrow}</Eyebrow>
-        <div className="grid md:grid-cols-3 gap-6 mt-10">
-          {t.testimonials.map((item) => (
-            <CardShell key={item.name} className="flex flex-col">
-              <Quote className="w-5 h-5" style={{ color: BRASS }} strokeWidth={1.5} />
-              <p className="leading-relaxed mt-4 flex-1" style={{ color: INK }}>{item.quote}</p>
-              <div className="mt-6 pt-5 border-t" style={{ borderColor: "rgba(14,59,54,0.1)" }}>
-                <p className="text-base font-medium" style={{ color: NAVY }}>{item.name}</p>
-                <p className="text-sm mt-0.5" style={{ color: "#8A948F" }}>{item.location}</p>
-              </div>
-            </CardShell>
-          ))}
         </div>
       </section>
 
@@ -1218,7 +1188,7 @@ function ListingCard({ l }) {
   const { t } = useLang();
   const lb = t.buy.labels;
   return (
-    <div className="border border-white/10 rounded-sm p-7 hover:border-[#C1613F]/50 transition-colors" style={{ background: NAVY_LIGHT }}>
+    <div className="border border-white/10 rounded-sm p-7 hover:border-[#D98E3F]/50 transition-colors" style={{ background: NAVY_LIGHT }}>
       <div className="flex items-center justify-between flex-wrap gap-2">
         <span className="font-mono2 text-[12px] tracking-[0.15em] uppercase" style={{ color: MIST }}>{l.industry}</span>
         <span className="font-mono2 text-[12px] tracking-[0.1em] uppercase px-2 py-1 rounded-sm" style={{ background: BRASS, color: NAVY }}>{l.tag}</span>
@@ -1245,7 +1215,7 @@ function ListingCard({ l }) {
         {[[lb.years, l.years], [lb.employees, l.employees], [lb.leaseLeft, l.leaseRemaining]].map(([label, value]) => (
           <div key={label}>
             <p className="font-mono2 text-[12px] uppercase" style={{ color: MIST }}>{label}</p>
-            <p className="font-mono2 mt-1" style={{ color: "#D7E0DB" }}>{value}</p>
+            <p className="font-mono2 mt-1" style={{ color: "#CDD1EA" }}>{value}</p>
           </div>
         ))}
       </div>
@@ -1342,7 +1312,7 @@ function SellPage({ onNavigate }) {
             <h1 className="font-display text-4xl lg:text-5xl mt-4 max-w-2xl">
               {t.sell.title}
             </h1>
-            <p className="mt-4 max-w-xl" style={{ color: "#C3D0CB" }}>
+            <p className="mt-4 max-w-xl" style={{ color: "#C7CBE8" }}>
               {t.sell.copy}
             </p>
             <button onClick={() => onNavigate("resources")} className="inline-flex items-center gap-2 font-medium text-base px-6 py-3.5 rounded-sm mt-8 transition-colors" style={{ background: BRASS, color: NAVY }}>
@@ -1378,11 +1348,11 @@ function SellPage({ onNavigate }) {
       </section>
 
       {/* Process */}
-      <section style={{ background: PAPER_DIM, borderColor: "rgba(14,59,54,0.1)" }} className="py-20 lg:py-28 border-y">
+      <section style={{ background: PAPER_DIM, borderColor: "rgba(33,37,74,0.1)" }} className="py-20 lg:py-28 border-y">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <Eyebrow>{t.sell.processEyebrow}</Eyebrow>
           <h2 className="font-display text-4xl lg:text-5xl mt-4" style={{ color: NAVY }}>{t.sell.processTitle}</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-px mt-12 rounded-sm overflow-hidden" style={{ background: "rgba(14,59,54,0.1)" }}>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-px mt-12 rounded-sm overflow-hidden" style={{ background: "rgba(33,37,74,0.1)" }}>
             {t.sell.processSteps.map((step, i) => (
               <div key={step} className="bg-white p-6">
                 <span className="font-mono2 text-base" style={{ color: BRASS }}>{String(i + 1).padStart(2, "0")}</span>
@@ -1428,7 +1398,7 @@ function E2Page({ onNavigate }) {
             <h1 className="font-display text-4xl lg:text-5xl mt-4 max-w-2xl">
               {t.e2.title}
             </h1>
-            <p className="mt-4 max-w-xl" style={{ color: "#C3D0CB" }}>
+            <p className="mt-4 max-w-xl" style={{ color: "#C7CBE8" }}>
               {t.e2.copy}
             </p>
             <div className="flex items-center gap-3 mt-8 p-4 border border-white/10 rounded-sm max-w-xl" style={{ background: NAVY_LIGHT }}>
@@ -1458,7 +1428,7 @@ function E2Page({ onNavigate }) {
       </section>
 
       {/* Roadmap */}
-      <section style={{ background: PAPER_DIM, borderColor: "rgba(14,59,54,0.1)" }} className="py-20 lg:py-28 border-y">
+      <section style={{ background: PAPER_DIM, borderColor: "rgba(33,37,74,0.1)" }} className="py-20 lg:py-28 border-y">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <Eyebrow>{t.e2.roadmapEyebrow}</Eyebrow>
           <h2 className="font-display text-4xl lg:text-5xl mt-4" style={{ color: NAVY }}>{t.e2.roadmapTitle}</h2>
@@ -1469,7 +1439,7 @@ function E2Page({ onNavigate }) {
                   <span className="w-9 h-9 rounded-full flex items-center justify-center font-mono2 text-sm shrink-0" style={{ background: NAVY, color: BRASS }}>
                     {i + 1}
                   </span>
-                  {i < t.e2.roadmap.length - 1 && <span className="w-px h-8" style={{ background: "rgba(14,59,54,0.25)" }} />}
+                  {i < t.e2.roadmap.length - 1 && <span className="w-px h-8" style={{ background: "rgba(33,37,74,0.25)" }} />}
                 </div>
                 <p className="py-2 text-base sm:text-lg" style={{ color: NAVY }}>{step}</p>
               </div>
@@ -1484,7 +1454,7 @@ function E2Page({ onNavigate }) {
         <h2 className="font-display text-4xl mt-4" style={{ color: NAVY }}>{t.e2.idealTitle}</h2>
         <div className="flex flex-wrap gap-3 mt-8">
           {t.e2.industries.map((i) => (
-            <span key={i} className="text-base px-4 py-2 rounded-full border" style={{ borderColor: "rgba(14,59,54,0.15)", color: NAVY }}>{i}</span>
+            <span key={i} className="text-base px-4 py-2 rounded-full border" style={{ borderColor: "rgba(33,37,74,0.15)", color: NAVY }}>{i}</span>
           ))}
         </div>
       </section>
@@ -1515,7 +1485,7 @@ function InternationalPage({ onNavigate }) {
             <h1 className="font-display text-4xl lg:text-5xl mt-4 max-w-2xl">
               {t.international.title}
             </h1>
-            <p className="mt-4 max-w-xl" style={{ color: "#C3D0CB" }}>
+            <p className="mt-4 max-w-xl" style={{ color: "#C7CBE8" }}>
               {t.international.copy}
             </p>
           </div>
@@ -1535,7 +1505,7 @@ function InternationalPage({ onNavigate }) {
           <Eyebrow>{t.international.countriesEyebrow}</Eyebrow>
           <div className="grid grid-cols-2 gap-3 mt-6">
             {t.international.countries.map((c) => (
-              <div key={c} className="flex items-center gap-2.5 text-base border rounded-sm px-4 py-3" style={{ borderColor: "rgba(14,59,54,0.12)", color: NAVY }}>
+              <div key={c} className="flex items-center gap-2.5 text-base border rounded-sm px-4 py-3" style={{ borderColor: "rgba(33,37,74,0.12)", color: NAVY }}>
                 <Globe2 className="w-4 h-4" style={{ color: BRASS }} strokeWidth={1.5} />
                 {c}
               </div>
@@ -1585,7 +1555,7 @@ function ServicesPage({ onNavigate }) {
         </div>
       </section>
 
-      <section style={{ background: PAPER_DIM, borderColor: "rgba(14,59,54,0.1)" }} className="py-16 border-y">
+      <section style={{ background: PAPER_DIM, borderColor: "rgba(33,37,74,0.1)" }} className="py-16 border-y">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <h2 className="font-display text-3xl" style={{ color: NAVY }}>{t.services.sellerTitle}</h2>
           <div className="mt-8">
@@ -1643,29 +1613,29 @@ function ResourcesPage({ onNavigate }) {
           <div className="space-y-7">
             <div>
               <label className="text-base font-medium" style={{ color: NAVY }}>{r.revenueLabel}</label>
-              <input type="range" min="200000" max="10000000" step="50000" value={revenue} onChange={(e) => setRevenue(Number(e.target.value))} className="w-full mt-3 accent-[#C1613F]" />
+              <input type="range" min="200000" max="10000000" step="50000" value={revenue} onChange={(e) => setRevenue(Number(e.target.value))} className="w-full mt-3 accent-[#D98E3F]" />
               <p className="font-mono2 text-base mt-1" style={{ color: SLATE }}>{fmt(revenue)}</p>
             </div>
             <div>
               <label className="text-base font-medium" style={{ color: NAVY }}>{r.cashFlowLabel}</label>
-              <input type="range" min="50000" max="2000000" step="10000" value={cashFlow} onChange={(e) => setCashFlow(Number(e.target.value))} className="w-full mt-3 accent-[#C1613F]" />
+              <input type="range" min="50000" max="2000000" step="10000" value={cashFlow} onChange={(e) => setCashFlow(Number(e.target.value))} className="w-full mt-3 accent-[#D98E3F]" />
               <p className="font-mono2 text-base mt-1" style={{ color: SLATE }}>{fmt(cashFlow)}</p>
             </div>
             <div>
               <label className="text-base font-medium" style={{ color: NAVY }}>{r.industryLabel}</label>
-              <select value={industry} onChange={(e) => setIndustry(e.target.value)} className="w-full mt-3 border rounded-sm px-4 py-3 text-base" style={{ borderColor: "rgba(14,59,54,0.2)", color: NAVY }}>
+              <select value={industry} onChange={(e) => setIndustry(e.target.value)} className="w-full mt-3 border rounded-sm px-4 py-3 text-base" style={{ borderColor: "rgba(33,37,74,0.2)", color: NAVY }}>
                 {Object.keys(INDUSTRY_MULTIPLES).map((i) => <option key={i}>{i}</option>)}
               </select>
             </div>
             <div className="grid sm:grid-cols-2 gap-6">
               <div>
                 <label className="text-base font-medium" style={{ color: NAVY }}>{r.yearsLabel}</label>
-                <input type="range" min="0" max="30" value={years} onChange={(e) => setYears(Number(e.target.value))} className="w-full mt-3 accent-[#C1613F]" />
+                <input type="range" min="0" max="30" value={years} onChange={(e) => setYears(Number(e.target.value))} className="w-full mt-3 accent-[#D98E3F]" />
                 <p className="font-mono2 text-base mt-1" style={{ color: SLATE }}>{years} {r.years}</p>
               </div>
               <div>
                 <label className="text-base font-medium" style={{ color: NAVY }}>{r.growthLabel}</label>
-                <input type="range" min="-10" max="30" value={growth} onChange={(e) => setGrowth(Number(e.target.value))} className="w-full mt-3 accent-[#C1613F]" />
+                <input type="range" min="-10" max="30" value={growth} onChange={(e) => setGrowth(Number(e.target.value))} className="w-full mt-3 accent-[#D98E3F]" />
                 <p className="font-mono2 text-base mt-1" style={{ color: SLATE }}>{growth}%</p>
               </div>
             </div>
@@ -1690,13 +1660,13 @@ function ResourcesPage({ onNavigate }) {
       </section>
 
       {/* Knowledge center */}
-      <section style={{ background: PAPER_DIM, borderColor: "rgba(14,59,54,0.1)" }} className="py-16 border-t">
+      <section style={{ background: PAPER_DIM, borderColor: "rgba(33,37,74,0.1)" }} className="py-16 border-t">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <h2 className="font-display text-2xl mb-8" style={{ color: NAVY }}>{r.knowledgeTitle}</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {r.articles.map((a) => (
               <button key={a.title} onClick={() => onNavigate("contact")} className="text-left">
-                <CardShell className="hover:border-[#C1613F]/50 h-full">
+                <CardShell className="hover:border-[#D98E3F]/50 h-full">
                   <span className="font-mono2 text-[12px] tracking-[0.15em] uppercase" style={{ color: BRASS }}>{a.tag}</span>
                   <h3 className="font-display text-xl mt-3 leading-snug" style={{ color: NAVY }}>{a.title}</h3>
                   <span className="inline-flex items-center gap-1.5 text-sm mt-4" style={{ color: SLATE }}>{r.readArticle} <ArrowUpRight className="w-3.5 h-3.5" /></span>
@@ -1730,7 +1700,7 @@ function AboutPage({ onNavigate }) {
             <h1 className="font-display text-4xl lg:text-5xl mt-4 max-w-2xl">
               {t.about.title}
             </h1>
-            <p className="mt-4 max-w-xl" style={{ color: "#C3D0CB" }}>
+            <p className="mt-4 max-w-xl" style={{ color: "#C7CBE8" }}>
               {t.about.copy}
             </p>
           </div>
@@ -1751,7 +1721,7 @@ function AboutPage({ onNavigate }) {
         })}
       </section>
 
-      <section style={{ background: PAPER_DIM, borderColor: "rgba(14,59,54,0.1)" }} className="py-16 border-y">
+      <section style={{ background: PAPER_DIM, borderColor: "rgba(33,37,74,0.1)" }} className="py-16 border-y">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <Eyebrow>{t.about.networkEyebrow}</Eyebrow>
           <h2 className="font-display text-3xl mt-4" style={{ color: NAVY }}>{t.about.networkTitle}</h2>
@@ -1791,14 +1761,14 @@ function ContactPage() {
         <p className="mt-4 leading-relaxed" style={{ color: SLATE }}>
           {c.copy}
         </p>
-        <div className="mt-6 flex items-center gap-3 p-4 rounded-sm border" style={{ borderColor: "rgba(14,59,54,0.12)", background: "white" }}>
+        <div className="mt-6 flex items-center gap-3 p-4 rounded-sm border" style={{ borderColor: "rgba(33,37,74,0.12)", background: "white" }}>
           <span className="w-11 h-11 rounded-full flex items-center justify-center font-display text-base shrink-0" style={{ background: NAVY, color: BRASS }}>TE</span>
           <div>
             <p className="text-base font-medium" style={{ color: NAVY }}>Tomas Echeverria</p>
             <p className="text-sm" style={{ color: SLATE }}>{c.advisorRole}</p>
           </div>
         </div>
-        <div className="mt-3 flex items-center gap-3 p-4 rounded-sm border" style={{ borderColor: "rgba(14,59,54,0.12)", background: "white" }}>
+        <div className="mt-3 flex items-center gap-3 p-4 rounded-sm border" style={{ borderColor: "rgba(33,37,74,0.12)", background: "white" }}>
           <span className="w-11 h-11 rounded-full flex items-center justify-center font-display text-base shrink-0" style={{ background: NAVY, color: BRASS }}>MS</span>
           <div>
             <p className="text-base font-medium" style={{ color: NAVY }}>Maria Saad</p>
@@ -1813,7 +1783,7 @@ function ContactPage() {
         </div>
       </div>
 
-      <div className="rounded-sm p-8 border" style={{ borderColor: "rgba(14,59,54,0.1)", background: "white" }}>
+      <div className="rounded-sm p-8 border" style={{ borderColor: "rgba(33,37,74,0.1)", background: "white" }}>
         {submitted ? (
           <div className="py-10 text-center">
             <ShieldCheck className="w-8 h-8 mx-auto" style={{ color: GOOD }} strokeWidth={1.5} />
@@ -1832,7 +1802,7 @@ function ContactPage() {
                     onClick={() => setRoleIndex(i)}
                     className="text-sm py-2.5 rounded-sm border transition-colors"
                     style={{
-                      borderColor: roleIndex === i ? BRASS : "rgba(14,59,54,0.15)",
+                      borderColor: roleIndex === i ? BRASS : "rgba(33,37,74,0.15)",
                       background: roleIndex === i ? BRASS : "transparent",
                       color: roleIndex === i ? NAVY : SLATE,
                       fontWeight: roleIndex === i ? 600 : 400,
@@ -1846,20 +1816,20 @@ function ContactPage() {
             <div className="grid sm:grid-cols-2 gap-5">
               <div>
                 <label className="text-base font-medium" style={{ color: NAVY }}>{c.fullName}</label>
-                <input required type="text" className="w-full mt-2 border rounded-sm px-4 py-3 text-base" style={{ borderColor: "rgba(14,59,54,0.2)" }} />
+                <input required type="text" className="w-full mt-2 border rounded-sm px-4 py-3 text-base" style={{ borderColor: "rgba(33,37,74,0.2)" }} />
               </div>
               <div>
                 <label className="text-base font-medium" style={{ color: NAVY }}>{c.email}</label>
-                <input required type="email" className="w-full mt-2 border rounded-sm px-4 py-3 text-base" style={{ borderColor: "rgba(14,59,54,0.2)" }} />
+                <input required type="email" className="w-full mt-2 border rounded-sm px-4 py-3 text-base" style={{ borderColor: "rgba(33,37,74,0.2)" }} />
               </div>
             </div>
             <div>
               <label className="text-base font-medium" style={{ color: NAVY }}>{c.phone}</label>
-              <input type="tel" className="w-full mt-2 border rounded-sm px-4 py-3 text-base" style={{ borderColor: "rgba(14,59,54,0.2)" }} />
+              <input type="tel" className="w-full mt-2 border rounded-sm px-4 py-3 text-base" style={{ borderColor: "rgba(33,37,74,0.2)" }} />
             </div>
             <div>
               <label className="text-base font-medium" style={{ color: NAVY }}>{c.howHelp}</label>
-              <textarea rows={4} className="w-full mt-2 border rounded-sm px-4 py-3 text-base" style={{ borderColor: "rgba(14,59,54,0.2)" }} />
+              <textarea rows={4} className="w-full mt-2 border rounded-sm px-4 py-3 text-base" style={{ borderColor: "rgba(33,37,74,0.2)" }} />
             </div>
             <button type="submit" className="w-full inline-flex items-center justify-center gap-2 font-medium text-base px-6 py-3.5 rounded-sm transition-colors" style={{ background: NAVY, color: "white" }}>
               {c.send} <ArrowRight className="w-4 h-4" />
@@ -1909,7 +1879,7 @@ export default function Doing2Gether() {
         @keyframes ledgerScroll { 0% { transform: translateY(0); } 100% { transform: translateY(-50%); } }
         .ledger-track { animation: ledgerScroll 26s linear infinite; }
         @media (prefers-reduced-motion: reduce) { .ledger-track { animation: none; } }
-        input[type="range"] { height: 4px; border-radius: 999px; background: rgba(14,59,54,0.12); }
+        input[type="range"] { height: 4px; border-radius: 999px; background: rgba(33,37,74,0.12); }
       `}</style>
 
       <Header page={page} onNavigate={navigate} />
