@@ -174,22 +174,16 @@ const T = {
       disclaimer: "Directional estimate only, not an appraisal.",
       knowledgeTitle: "Knowledge Center", readArticle: "Read article",
       articles: [
-        { tag: "Valuation", title: "How Much Is My Business Worth?" },
-        { tag: "Valuation", title: "Understanding SDE" },
-        { tag: "Valuation", title: "EBITDA vs. SDE" },
-        { tag: "Valuation", title: "Valuation Multiples by Industry" },
-        { tag: "Financing", title: "How Seller Financing Works" },
-        { tag: "Financing", title: "How SBA 7(a) Loans Work" },
-        { tag: "Buyer Guide", title: "Buying a Business vs. Starting One" },
-        { tag: "E-2 Visa", title: "Best Businesses for E-2 Investors" },
-        { tag: "Buyer Guide", title: "How to Analyze a Business" },
-        { tag: "Buyer Guide", title: "Common Mistakes First-Time Buyers Make" },
-        { tag: "Due Diligence", title: "Our Due Diligence Checklist" },
-        { tag: "Industry Guide", title: "Buying a Restaurant" },
-        { tag: "Industry Guide", title: "Buying a Med Spa" },
-        { tag: "Industry Guide", title: "Buying a Car Wash" },
-        { tag: "Industry Guide", title: "Buying a Cleaning Company" },
-        { tag: "Market", title: "Florida Business Market Trends, 2026" },
+        { slug: "business-worth", tag: "Valuation", title: "How Much Is My Business Worth?" },
+        { slug: "understanding-sde", tag: "Valuation", title: "Understanding SDE" },
+        { slug: "ebitda-vs-sde", tag: "Valuation", title: "EBITDA vs. SDE" },
+        { slug: "seller-financing", tag: "Financing", title: "How Seller Financing Works" },
+        { slug: "sba-loans", tag: "Financing", title: "How SBA 7(a) Loans Work" },
+        { slug: "buying-vs-starting", tag: "Buyer Guide", title: "Buying a Business vs. Starting One" },
+        { slug: "e2-best-businesses", tag: "E-2 Visa", title: "Best Businesses for E-2 Investors" },
+        { slug: "due-diligence-checklist", tag: "Due Diligence", title: "Our Due Diligence Checklist" },
+        { slug: "buying-a-restaurant", tag: "Industry Guide", title: "Buying a Restaurant" },
+        { slug: "market-trends-2026", tag: "Market", title: "Florida Business Market Trends, 2026" },
       ],
     },
     about: {
@@ -364,22 +358,16 @@ const T = {
       disclaimer: "Estimación orientativa únicamente, no es una tasación.",
       knowledgeTitle: "Centro de Conocimiento", readArticle: "Leer artículo",
       articles: [
-        { tag: "Valoración", title: "¿Cuánto Vale Mi Negocio?" },
-        { tag: "Valoración", title: "Entendiendo el SDE" },
-        { tag: "Valoración", title: "EBITDA vs. SDE" },
-        { tag: "Valoración", title: "Múltiplos de Valoración por Industria" },
-        { tag: "Financiamiento", title: "Cómo Funciona el Financiamiento del Vendedor" },
-        { tag: "Financiamiento", title: "Cómo Funcionan los Préstamos SBA 7(a)" },
-        { tag: "Guía del Comprador", title: "Comprar un Negocio vs. Comenzar Uno" },
-        { tag: "Visa E-2", title: "Los Mejores Negocios para Inversionistas E-2" },
-        { tag: "Guía del Comprador", title: "Cómo Analizar un Negocio" },
-        { tag: "Guía del Comprador", title: "Errores Comunes de Compradores Primerizos" },
-        { tag: "Debida Diligencia", title: "Nuestra Lista de Verificación" },
-        { tag: "Guía de Industria", title: "Comprar un Restaurante" },
-        { tag: "Guía de Industria", title: "Comprar un Spa Médico" },
-        { tag: "Guía de Industria", title: "Comprar un Autolavado" },
-        { tag: "Guía de Industria", title: "Comprar una Empresa de Limpieza" },
-        { tag: "Mercado", title: "Tendencias del Mercado en Florida, 2026" },
+        { slug: "business-worth", tag: "Valoración", title: "¿Cuánto Vale Mi Negocio?" },
+        { slug: "understanding-sde", tag: "Valoración", title: "Entendiendo el SDE" },
+        { slug: "ebitda-vs-sde", tag: "Valoración", title: "EBITDA vs. SDE" },
+        { slug: "seller-financing", tag: "Financiamiento", title: "Cómo Funciona el Financiamiento del Vendedor" },
+        { slug: "sba-loans", tag: "Financiamiento", title: "Cómo Funcionan los Préstamos SBA 7(a)" },
+        { slug: "buying-vs-starting", tag: "Guía del Comprador", title: "Comprar un Negocio vs. Comenzar Uno" },
+        { slug: "e2-best-businesses", tag: "Visa E-2", title: "Los Mejores Negocios para Inversionistas E-2" },
+        { slug: "due-diligence-checklist", tag: "Debida Diligencia", title: "Nuestra Lista de Verificación" },
+        { slug: "buying-a-restaurant", tag: "Guía de Industria", title: "Comprar un Restaurante" },
+        { slug: "market-trends-2026", tag: "Mercado", title: "Tendencias del Mercado en Florida, 2026" },
       ],
     },
     about: {
@@ -417,6 +405,234 @@ const T = {
   },
 };
 
+
+
+/* ================================================================== */
+/*  KNOWLEDGE CENTER ARTICLE CONTENT (EN / ES)                         */
+/* ================================================================== */
+
+const ARTICLE_CONTENT = {
+  "business-worth": {
+    en: {
+      tag: "Valuation", title: "How Much Is My Business Worth?",
+      body: [
+        "Most owners have a number in mind for what their business is worth. Most of those numbers are wrong — usually too high, sometimes too low, almost always based on what the owner needs the sale to cover rather than what the market will actually pay.",
+        "A real valuation starts with your Seller's Discretionary Earnings, or SDE: your net profit, plus your own salary, plus one-time or personal expenses run through the business. That number, not your revenue, is what buyers and lenders actually price against.",
+        "From there, a multiple is applied based on your industry, size, growth trend, and how dependent the business is on you personally. A restaurant might sell for 2 to 2.5 times SDE. A home services company with recurring contracts might fetch 3 to 3.5 times. The gap between those numbers is almost entirely about risk.",
+        "Two businesses with identical revenue can have very different values. The one with diversified customers, documented systems, and a manager who isn't the owner will outsell the one that's entirely dependent on the founder showing up every day.",
+        "A free estimate — using our valuation tool or a quick call — takes twenty minutes and gives you a realistic range grounded in actual South Florida transactions, not a generic rule of thumb pulled from the internet.",
+      ],
+    },
+    es: {
+      tag: "Valoración", title: "¿Cuánto Vale Mi Negocio?",
+      body: [
+        "La mayoría de los propietarios tiene una cifra en mente para lo que vale su negocio. La mayoría de esas cifras están equivocadas — casi siempre demasiado altas, a veces demasiado bajas, y casi siempre basadas en lo que el propietario necesita cubrir con la venta, no en lo que el mercado realmente pagará.",
+        "Una valoración real comienza con sus Ganancias Discrecionales del Vendedor, o SDE: su utilidad neta, más su propio salario, más gastos personales o únicos que pasan por el negocio. Esa cifra, no sus ingresos, es lo que realmente usan compradores y prestamistas.",
+        "A partir de ahí se aplica un múltiplo según su industria, tamaño, tendencia de crecimiento y qué tan dependiente es el negocio de usted. Un restaurante puede venderse entre 2 y 2.5 veces el SDE. Una empresa de servicios para el hogar con contratos recurrentes puede alcanzar entre 3 y 3.5 veces. La diferencia entre esas cifras es casi enteramente sobre riesgo.",
+        "Dos negocios con ingresos idénticos pueden tener valores muy distintos. El que tiene clientes diversificados, sistemas documentados y un gerente que no es el propietario se venderá mejor que el que depende por completo de que el fundador se presente todos los días.",
+        "Una estimación gratuita — usando nuestra herramienta de valoración o una llamada breve — toma veinte minutos y le da un rango realista basado en transacciones reales del sur de Florida, no en una regla genérica sacada de internet.",
+      ],
+    },
+  },
+  "understanding-sde": {
+    en: {
+      tag: "Valuation", title: "Understanding SDE",
+      body: [
+        "Seller's Discretionary Earnings is the single most important number in a small business sale, and the most misunderstood. It answers one question: if you bought this business and ran it yourself, how much would it actually put in your pocket each year?",
+        "Start with net profit from the tax return. Add back the owner's salary and payroll taxes on that salary — a buyer isn't paying the current owner's salary, they're the one who'll be working. Add back interest, depreciation, and amortization, since those are financing and accounting choices, not operating costs.",
+        "Then add back the gray area: the owner's personal cell phone, a family member on payroll who doesn't really work there, a truck used half for business and half for weekend trips, a one-time legal settlement. Done honestly, this is normal. Done aggressively, it's the fastest way to lose a buyer's trust mid-negotiation.",
+        "SDE typically applies to smaller businesses, generally under $1-2M in earnings, where the owner is still hands-on. Larger, more institutional businesses shift to EBITDA instead, which does not add back the owner's compensation.",
+        "Buyers and their lenders will rebuild this number from your actual financials regardless of what you present. The businesses that sell fastest are the ones where the seller's SDE calculation and the buyer's due diligence land in the same place.",
+      ],
+    },
+    es: {
+      tag: "Valoración", title: "Entendiendo el SDE",
+      body: [
+        "Las Ganancias Discrecionales del Vendedor son la cifra más importante en la venta de un negocio pequeño, y la más malentendida. Responde una pregunta: si usted comprara este negocio y lo operara personalmente, ¿cuánto pondría realmente en su bolsillo cada año?",
+        "Comience con la utilidad neta de la declaración de impuestos. Sume de nuevo el salario del propietario y los impuestos de nómina sobre ese salario — un comprador no paga el salario del propietario actual, es él quien trabajará. Sume intereses, depreciación y amortización, ya que son decisiones de financiamiento y contabilidad, no costos operativos.",
+        "Luego está la zona gris: el celular personal del propietario, un familiar en nómina que no trabaja realmente ahí, una camioneta usada mitad para el negocio y mitad para paseos de fin de semana, un acuerdo legal único. Hecho con honestidad, esto es normal. Hecho de forma agresiva, es la manera más rápida de perder la confianza de un comprador a mitad de la negociación.",
+        "El SDE se aplica normalmente a negocios más pequeños, generalmente con ganancias por debajo de $1 a $2 millones, donde el propietario sigue involucrado directamente. Los negocios más grandes e institucionales usan EBITDA en su lugar, que no suma de nuevo la compensación del propietario.",
+        "Los compradores y sus prestamistas reconstruirán esta cifra a partir de sus estados financieros reales, sin importar lo que usted presente. Los negocios que se venden más rápido son aquellos donde el cálculo del SDE del vendedor y la debida diligencia del comprador coinciden.",
+      ],
+    },
+  },
+  "ebitda-vs-sde": {
+    en: {
+      tag: "Valuation", title: "EBITDA vs. SDE",
+      body: [
+        "Buyers and sellers throw both terms around like they're interchangeable. They're not, and using the wrong one can make your business look either underpriced or wildly overpriced to the person reviewing it.",
+        "SDE — Seller's Discretionary Earnings — adds back the owner's full salary and benefits, because it assumes a single owner-operator is stepping in to replace the seller and do that job themselves. It's the standard for most Main Street businesses under a few million in revenue.",
+        "EBITDA — Earnings Before Interest, Taxes, Depreciation, and Amortization — does not add back owner compensation. It assumes a management team is already in place, or will be hired, and the buyer is purchasing cash flow rather than a job.",
+        "The practical effect: the same business can show a meaningfully higher SDE than EBITDA, because SDE credits back the value of the owner's own labor. A business with $200K in profit and a $150K owner salary might show $350K in SDE, but closer to $200K in EBITDA.",
+        "Which one applies to your business usually comes down to size and whether it can run without you in the room. If you're not sure which applies, that's exactly the kind of question a real valuation should answer before you set a price.",
+      ],
+    },
+    es: {
+      tag: "Valoración", title: "EBITDA vs. SDE",
+      body: [
+        "Compradores y vendedores usan ambos términos como si fueran intercambiables. No lo son, y usar el equivocado puede hacer que su negocio parezca subvalorado o exageradamente caro ante quien lo revisa.",
+        "El SDE — Ganancias Discrecionales del Vendedor — suma de nuevo el salario y beneficios completos del propietario, porque asume que un solo propietario-operador entrará a reemplazar al vendedor y hacer ese trabajo él mismo. Es el estándar para la mayoría de los negocios pequeños con ingresos de pocos millones o menos.",
+        "El EBITDA — Ganancias Antes de Intereses, Impuestos, Depreciación y Amortización — no suma de nuevo la compensación del propietario. Asume que ya existe un equipo de gestión, o que se contratará uno, y que el comprador adquiere flujo de caja, no un empleo.",
+        "El efecto práctico: el mismo negocio puede mostrar un SDE considerablemente más alto que el EBITDA, porque el SDE reconoce el valor del trabajo del propietario. Un negocio con $200,000 de utilidad y un salario del propietario de $150,000 podría mostrar $350,000 de SDE, pero cerca de $200,000 de EBITDA.",
+        "Cuál de los dos aplica a su negocio generalmente depende del tamaño y de si puede operar sin usted presente. Si no está seguro cuál aplica, esa es exactamente la pregunta que una valoración real debe responder antes de fijar un precio.",
+      ],
+    },
+  },
+  "seller-financing": {
+    en: {
+      tag: "Financing", title: "How Seller Financing Works",
+      body: [
+        "Seller financing means part of the purchase price is paid over time, directly to you, instead of all at once at closing. It's common in Main Street deals, and often the difference between a business selling and a business sitting on the market for a year.",
+        "A typical structure: the buyer pays 70-85% of the price at closing — often through an SBA loan, savings, or investor capital — and the remaining 15-30% is financed by the seller over three to five years, at an agreed interest rate.",
+        "For sellers, it usually means a slightly higher total sale price and a wider pool of qualified buyers, since fewer buyers need 100% outside financing. It also signals to the buyer's lender that you believe in the business enough to have skin in the outcome.",
+        "For buyers, it lowers the amount of outside capital or debt needed upfront, and it's a practical vote of confidence from the person who knows the business best.",
+        "The terms — interest rate, payment schedule, what happens if the business underperforms, whether it's secured against business assets — all get negotiated and documented in the purchase agreement, with your attorney and the buyer's reviewing every line before signing.",
+      ],
+    },
+    es: {
+      tag: "Financiamiento", title: "Cómo Funciona el Financiamiento del Vendedor",
+      body: [
+        "El financiamiento del vendedor significa que parte del precio de compra se paga con el tiempo, directamente a usted, en lugar de todo de una vez en el cierre. Es común en negocios pequeños y medianos, y muchas veces marca la diferencia entre vender el negocio o dejarlo un año en el mercado.",
+        "Una estructura típica: el comprador paga entre el 70% y 85% del precio en el cierre — a menudo mediante un préstamo SBA, ahorros o capital de inversionistas — y el 15% a 30% restante lo financia el vendedor durante tres a cinco años, a una tasa de interés acordada.",
+        "Para los vendedores, generalmente significa un precio total de venta ligeramente más alto y un grupo más amplio de compradores calificados, ya que menos compradores necesitan financiamiento externo al 100%. También le indica al prestamista del comprador que usted confía lo suficiente en el negocio como para tener algo en juego.",
+        "Para los compradores, reduce el capital externo o la deuda necesaria por adelantado, y es un voto de confianza práctico de parte de quien mejor conoce el negocio.",
+        "Los términos — tasa de interés, calendario de pagos, qué ocurre si el negocio no rinde lo esperado, si está garantizado contra los activos del negocio — se negocian y documentan en el contrato de compraventa, con su abogado y el del comprador revisando cada línea antes de firmar.",
+      ],
+    },
+  },
+  "sba-loans": {
+    en: {
+      tag: "Financing", title: "How SBA 7(a) Loans Work",
+      body: [
+        "The SBA 7(a) loan is the most common way buyers finance a Main Street business acquisition in the U.S. It's not a loan from the government — it's a conventional bank loan where the Small Business Administration guarantees a portion, which makes banks willing to lend on terms buyers couldn't get otherwise.",
+        "Typical structure: 10-15% down from the buyer, sometimes partly covered by seller financing, with the SBA-backed loan covering the rest — usually amortized over 10 years for a business acquisition, occasionally longer if real estate is included.",
+        "Approval depends more on the business's cash flow than the buyer's personal wealth. Lenders want to see the business can comfortably cover its own loan payments, which is one reason clean, well-documented financials matter so much when you're preparing to sell.",
+        "For non-U.S. citizens, SBA loans generally require lawful permanent residency or an approved visa status — E-2 investors typically don't qualify for SBA financing on the same acquisition that supports their visa, since SBA loans require personal guarantees tied to U.S. status. This is exactly the kind of detail worth confirming with a lender and an attorney early, not after you've found a business.",
+        "The process from application to funding usually takes 60-90 days, which is why financing gets lined up in parallel with due diligence rather than after it.",
+      ],
+    },
+    es: {
+      tag: "Financiamiento", title: "Cómo Funcionan los Préstamos SBA 7(a)",
+      body: [
+        "El préstamo SBA 7(a) es la forma más común en que los compradores financian la adquisición de un negocio pequeño o mediano en EE. UU. No es un préstamo del gobierno — es un préstamo bancario convencional donde la Administración de Pequeños Negocios garantiza una parte, lo que hace que los bancos estén dispuestos a prestar en condiciones que los compradores no obtendrían de otra forma.",
+        "Estructura típica: 10% a 15% de pago inicial del comprador, a veces cubierto parcialmente con financiamiento del vendedor, y el préstamo respaldado por la SBA cubre el resto — generalmente amortizado a 10 años para una adquisición de negocio, en ocasiones más si se incluye bienes raíces.",
+        "La aprobación depende más del flujo de caja del negocio que de la riqueza personal del comprador. Los prestamistas quieren ver que el negocio puede cubrir cómodamente los pagos de su propio préstamo, una razón por la que unos estados financieros limpios y bien documentados importan tanto al preparar la venta.",
+        "Para quienes no son ciudadanos estadounidenses, los préstamos SBA generalmente requieren residencia permanente legal o un estatus de visa aprobado — los inversionistas E-2 típicamente no califican para financiamiento SBA en la misma adquisición que respalda su visa, ya que los préstamos SBA requieren garantías personales ligadas al estatus migratorio en EE. UU. Este es exactamente el tipo de detalle que vale la pena confirmar con un prestamista y un abogado desde el principio, no después de haber encontrado el negocio.",
+        "El proceso desde la solicitud hasta el desembolso generalmente toma de 60 a 90 días, por lo que el financiamiento se organiza en paralelo con la debida diligencia, no después de ella.",
+      ],
+    },
+  },
+  "buying-vs-starting": {
+    en: {
+      tag: "Buyer Guide", title: "Buying a Business vs. Starting One",
+      body: [
+        "Starting a business from scratch means building revenue, customers, staff, and systems from zero, with no guarantee any of it works. Buying an existing business means acquiring all of that already in motion — at a price, and with its existing problems included.",
+        "The numbers usually favor buying. An established business with three-plus years of financials, a customer base, and trained staff is a known quantity a lender can underwrite. A startup is a bet on a plan, which is exactly why startup lending is so much harder to secure than acquisition financing.",
+        "Cash flow is the other big difference. A profitable acquisition can pay you from day one. A startup typically loses money before it turns a corner, sometimes for years, and that gap has to come from somewhere.",
+        "What you give up by buying is the ability to build something entirely your own from the ground up, and you inherit whatever the previous owner left behind — good or bad. Due diligence exists specifically to find out which one you're getting before you sign anything.",
+        "Neither path is objectively better. But if steady income, a lower failure rate, and a faster path to profitability matter more to you than building something from a blank page, acquisition is usually the stronger financial decision.",
+      ],
+    },
+    es: {
+      tag: "Guía del Comprador", title: "Comprar un Negocio vs. Comenzar Uno",
+      body: [
+        "Comenzar un negocio desde cero significa construir ingresos, clientes, personal y sistemas desde el inicio, sin garantía de que algo de eso funcione. Comprar un negocio existente significa adquirir todo eso ya en marcha — a un precio, e incluyendo sus problemas actuales.",
+        "Las cifras generalmente favorecen la compra. Un negocio establecido con tres años o más de estados financieros, una base de clientes y personal capacitado es una cantidad conocida que un prestamista puede evaluar. Una empresa nueva es una apuesta sobre un plan, precisamente por eso el financiamiento para startups es mucho más difícil de conseguir que el de adquisición.",
+        "El flujo de caja es la otra gran diferencia. Una adquisición rentable puede pagarle desde el primer día. Una empresa nueva típicamente pierde dinero antes de estabilizarse, a veces durante años, y ese vacío tiene que cubrirse de algún lado.",
+        "Lo que se pierde al comprar es la posibilidad de construir algo completamente propio desde cero, y se hereda lo que el propietario anterior dejó — bueno o malo. La debida diligencia existe precisamente para descubrir cuál de las dos cosas está recibiendo antes de firmar algo.",
+        "Ningún camino es objetivamente mejor. Pero si un ingreso estable, una menor tasa de fracaso y un camino más rápido hacia la rentabilidad le importan más que construir algo desde una hoja en blanco, la adquisición suele ser la decisión financiera más sólida.",
+      ],
+    },
+  },
+  "e2-best-businesses": {
+    en: {
+      tag: "E-2 Visa", title: "Best Businesses for E-2 Investors",
+      body: [
+        "USCIS doesn't publish a list of approved industries for the E-2 visa. What it looks for is a real, active, operating business — one that produces income, employs people or has a credible plan to, and isn't a passive holding of real estate or securities.",
+        "In practice, service businesses tend to be strong candidates: HVAC, plumbing, cleaning companies, landscaping, pest control. They have clear operating histories, straightforward financials, and a natural path to hiring, all of which make for a cleaner petition.",
+        "Restaurants and cafés are popular with investors but come with more scrutiny — food service has thinner margins and higher failure rates, so the business needs to clearly clear the marginality test on its own financials, not just the investment amount.",
+        "Franchises are worth a specific mention: many come with an established operating model and training, which can actually strengthen an E-2 case by demonstrating the business is more than a shell — but the franchise agreement itself needs review by your attorney for E-2 compatibility.",
+        "The honest answer is that the right business for your E-2 case depends on your investment amount, your background, and what your attorney believes will hold up under adjudication — which is exactly why we work alongside your immigration counsel from the search stage forward, not after you've already picked something.",
+      ],
+    },
+    es: {
+      tag: "Visa E-2", title: "Los Mejores Negocios para Inversionistas E-2",
+      body: [
+        "USCIS no publica una lista de industrias aprobadas para la visa E-2. Lo que busca es un negocio real, activo y operativo — uno que genere ingresos, emplee personas o tenga un plan creíble para hacerlo, y que no sea una tenencia pasiva de bienes raíces o valores.",
+        "En la práctica, los negocios de servicios suelen ser candidatos sólidos: HVAC, plomería, empresas de limpieza, jardinería, control de plagas. Tienen historiales operativos claros, finanzas sencillas y un camino natural hacia la contratación, todo lo cual facilita una petición más limpia.",
+        "Los restaurantes y cafés son populares entre los inversionistas pero reciben más escrutinio — el servicio de alimentos tiene márgenes más ajustados y mayores tasas de fracaso, por lo que el negocio debe superar claramente la prueba de marginalidad con sus propios estados financieros, no solo con el monto invertido.",
+        "Las franquicias merecen una mención especial: muchas vienen con un modelo operativo establecido y capacitación, lo cual puede fortalecer un caso E-2 al demostrar que el negocio es más que una fachada — pero el propio contrato de franquicia necesita revisión de su abogado para verificar la compatibilidad con E-2.",
+        "La respuesta honesta es que el negocio correcto para su caso E-2 depende de su monto de inversión, su trayectoria y lo que su abogado crea que resistirá la evaluación — precisamente por eso trabajamos junto a su asesor migratorio desde la etapa de búsqueda, no después de que ya eligió algo.",
+      ],
+    },
+  },
+  "due-diligence-checklist": {
+    en: {
+      tag: "Due Diligence", title: "Our Due Diligence Checklist",
+      body: [
+        "Due diligence is the period after a signed Letter of Intent where you verify everything the seller has told you, before you're contractually committed to close. It's the single most important stretch of any acquisition, and the most commonly rushed.",
+        "Financial diligence comes first: three years of tax returns and financial statements, bank statements matched against reported revenue, accounts receivable and payable aging, and a clear picture of any debt attached to the business.",
+        "Operational diligence looks at the business itself: customer concentration (is 40% of revenue tied to one client who could walk?), lease terms and remaining years, key employee dependence, equipment condition, and any pending litigation or regulatory issues.",
+        "Legal and commercial diligence covers licenses and permits, vendor contracts, any franchise agreements, insurance coverage, and whether the entity being sold is clean — no undisclosed liens or judgments attached to the business.",
+        "A missing document isn't automatically a red flag — small businesses are often run informally. But a pattern of missing or inconsistent records is. Our role is coordinating this entire process with your CPA and attorney so nothing gets missed under deadline pressure.",
+      ],
+    },
+    es: {
+      tag: "Debida Diligencia", title: "Nuestra Lista de Verificación",
+      body: [
+        "La debida diligencia es el período después de firmar una Carta de Intención en el que usted verifica todo lo que el vendedor le ha dicho, antes de comprometerse contractualmente a cerrar. Es el tramo más importante de cualquier adquisición, y el que más se apresura.",
+        "La diligencia financiera va primero: tres años de declaraciones de impuestos y estados financieros, estados de cuenta bancarios comparados con los ingresos reportados, antigüedad de cuentas por cobrar y por pagar, y una imagen clara de cualquier deuda asociada al negocio.",
+        "La diligencia operativa examina el negocio en sí: concentración de clientes (¿el 40% de los ingresos depende de un solo cliente que podría irse?), términos del arrendamiento y años restantes, dependencia de empleados clave, condición del equipo, y cualquier litigio o problema regulatorio pendiente.",
+        "La diligencia legal y comercial cubre licencias y permisos, contratos con proveedores, cualquier acuerdo de franquicia, cobertura de seguros, y si la entidad que se vende está limpia — sin gravámenes o sentencias no revelados sobre el negocio.",
+        "Un documento faltante no es automáticamente una señal de alerta — los negocios pequeños suelen operar de forma informal. Pero un patrón de registros faltantes o inconsistentes sí lo es. Nuestro papel es coordinar todo este proceso con su contador y abogado para que nada se pase por alto bajo presión de plazos.",
+      ],
+    },
+  },
+  "buying-a-restaurant": {
+    en: {
+      tag: "Industry Guide", title: "Buying a Restaurant",
+      body: [
+        "Restaurants are among the most emotionally appealing businesses to buy and among the least forgiving financially. Margins typically run 3-9% net, meaning small mistakes in food cost or labor scheduling show up fast on the bottom line.",
+        "The lease is often more important than the P&L. Confirm the remaining term, renewal options, and whether rent is scheduled to jump — a great restaurant with two years left on a lease and no renewal option is a very different purchase than one with ten years locked in.",
+        "Look closely at whether the numbers depend on the current owner's personal relationships — a chef whose name is on the door, a following built on one person's Instagram, a deal with a supplier that won't transfer. Revenue tied to the seller personally is revenue at risk after closing.",
+        "Equipment condition matters more here than in most industries — a walk-in cooler or hood system failure can be a five-figure surprise in week one. A pre-purchase equipment inspection is worth the cost every time.",
+        "For E-2 investors specifically: restaurants can work well, but the business needs to clearly stand on its own financials for the marginality test, and licensing (liquor license transfer, health permits) can add real time to the closing timeline — worth planning for from day one.",
+      ],
+    },
+    es: {
+      tag: "Guía de Industria", title: "Comprar un Restaurante",
+      body: [
+        "Los restaurantes están entre los negocios más atractivos emocionalmente para comprar y entre los menos indulgentes financieramente. Los márgenes suelen ser de 3% a 9% neto, lo que significa que pequeños errores en el costo de alimentos o la programación de personal se reflejan rápido en el resultado final.",
+        "El arrendamiento suele ser más importante que el estado de resultados. Confirme el plazo restante, las opciones de renovación y si la renta tiene aumentos programados — un excelente restaurante con dos años restantes de arrendamiento y sin opción de renovación es una compra muy distinta a una con diez años asegurados.",
+        "Observe con atención si las cifras dependen de las relaciones personales del propietario actual — un chef cuyo nombre está en la puerta, una clientela construida sobre el Instagram de una persona, un acuerdo con un proveedor que no se transferirá. Los ingresos ligados personalmente al vendedor son ingresos en riesgo después del cierre.",
+        "La condición del equipo importa más aquí que en la mayoría de las industrias — una falla en el cuarto frío o en el sistema de extracción puede ser una sorpresa de cinco cifras en la primera semana. Una inspección de equipo previa a la compra vale la pena siempre.",
+        "Para inversionistas E-2 específicamente: los restaurantes pueden funcionar bien, pero el negocio debe sostenerse claramente por sí solo en sus finanzas para la prueba de marginalidad, y las licencias (transferencia de licencia de licores, permisos sanitarios) pueden añadir tiempo real al cierre — vale la pena planearlo desde el primer día.",
+      ],
+    },
+  },
+  "market-trends-2026": {
+    en: {
+      tag: "Market", title: "Florida Business Market Trends, 2026",
+      body: [
+        "South Florida's business-for-sale market has stayed active across Miami-Dade, Broward, and Palm Beach counties, driven by steady population growth, no state income tax, and continued interest from both domestic relocations and international buyers.",
+        "Service-based businesses — home services, cleaning, healthcare-adjacent, and specialty retail — continue to see the strongest buyer demand, largely because they're less exposed to tariff and supply chain volatility than product-heavy businesses.",
+        "Financing conditions have a direct effect on multiples: as SBA lending terms shift, buyer purchasing power moves with them, which is part of why valuation multiples vary year to year even for similar businesses.",
+        "International buyer activity, particularly from Latin America, remains a meaningful share of the market, tied closely to E-2 visa demand and the relative stability of U.S. business ownership compared to alternatives elsewhere.",
+        "None of this changes the fundamentals of any single deal — a well-run business with clean records sells on its own merits regardless of the broader market. But knowing the climate helps set realistic expectations on both price and time to close.",
+      ],
+    },
+    es: {
+      tag: "Mercado", title: "Tendencias del Mercado en Florida, 2026",
+      body: [
+        "El mercado de negocios en venta del sur de Florida se ha mantenido activo en los condados de Miami-Dade, Broward y Palm Beach, impulsado por el crecimiento constante de la población, la ausencia de impuesto estatal sobre la renta, y el interés continuo tanto de reubicaciones nacionales como de compradores internacionales.",
+        "Los negocios basados en servicios — servicios para el hogar, limpieza, afines a la salud y comercio minorista especializado — siguen viendo la mayor demanda de compradores, en gran parte porque están menos expuestos a la volatilidad de aranceles y cadenas de suministro que los negocios centrados en productos.",
+        "Las condiciones de financiamiento tienen un efecto directo en los múltiplos: a medida que cambian los términos de los préstamos SBA, el poder adquisitivo de los compradores cambia con ellos, lo cual es parte de la razón por la que los múltiplos de valoración varían de un año a otro incluso para negocios similares.",
+        "La actividad de compradores internacionales, particularmente de América Latina, sigue siendo una parte importante del mercado, ligada de cerca a la demanda de visas E-2 y a la estabilidad relativa de la propiedad de negocios en EE. UU. comparada con otras alternativas.",
+        "Nada de esto cambia los fundamentos de ningún trato individual — un negocio bien administrado con registros limpios se vende por sus propios méritos sin importar el mercado en general. Pero conocer el panorama ayuda a fijar expectativas realistas tanto de precio como de tiempo para cerrar.",
+      ],
+    },
+  },
+};
 
 const NAVY = "#1F3A2E";
 const NAVY_LIGHT = "#26473A";
@@ -802,12 +1018,12 @@ function ScoreBar({ label, value, invert }) {
   );
 }
 
-function PageHeader({ eyebrow, title, copy }) {
+function PageHeader({ eyebrow, title, copy, dark }) {
   return (
     <div className="max-w-2xl">
       <Eyebrow>{eyebrow}</Eyebrow>
-      <h1 className="font-display text-4xl lg:text-5xl mt-4" style={{ color: NAVY }}>{title}</h1>
-      {copy && <p className="mt-4 leading-relaxed" style={{ color: SLATE }}>{copy}</p>}
+      <h1 className="font-display text-4xl lg:text-5xl mt-4" style={{ color: dark ? PAPER : NAVY }}>{title}</h1>
+      {copy && <p className="mt-4 leading-relaxed" style={{ color: dark ? "#B9C4B7" : SLATE }}>{copy}</p>}
     </div>
   );
 }
@@ -1253,16 +1469,19 @@ function BuyPage({ onNavigate }) {
   const { t } = useLang();
   return (
     <>
-      <section className="max-w-7xl mx-auto px-6 lg:px-10 pt-16 pb-4 grid md:grid-cols-[1.2fr_0.8fr] gap-10 items-center">
-        <PageHeader
-          eyebrow={t.buy.eyebrow}
-          title={t.buy.title}
-          copy={t.buy.copy}
-        />
-        <PageArt variant="buy" />
+      <section style={{ background: NAVY }} className="py-16">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10 grid md:grid-cols-[1.2fr_0.8fr] gap-10 items-center">
+          <PageHeader
+            eyebrow={t.buy.eyebrow}
+            title={t.buy.title}
+            copy={t.buy.copy}
+            dark
+          />
+          <PageArt variant="buy" />
+        </div>
       </section>
 
-      <section style={{ background: NAVY }} className="py-16 mt-8">
+      <section style={{ background: NAVY }} className="py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 grid md:grid-cols-2 gap-6">
           {LISTINGS.map((l) => <ListingCard key={l.title} l={l} />)}
         </div>
@@ -1534,9 +1753,11 @@ function ServicesPage({ onNavigate }) {
   const buyerIcons = [Building2, TrendingUp, ClipboardCheck, Landmark, Plane, Scale];
   return (
     <>
-      <section className="max-w-7xl mx-auto px-6 lg:px-10 pt-16 pb-4 grid md:grid-cols-[1.2fr_0.8fr] gap-10 items-center">
-        <PageHeader eyebrow={t.services.eyebrow} title={t.services.title} />
-        <PageArt variant="services" />
+      <section style={{ background: NAVY }} className="py-16">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10 grid md:grid-cols-[1.2fr_0.8fr] gap-10 items-center">
+          <PageHeader eyebrow={t.services.eyebrow} title={t.services.title} dark />
+          <PageArt variant="services" />
+        </div>
       </section>
 
       <section className="max-w-7xl mx-auto px-6 lg:px-10 py-16">
@@ -1595,12 +1816,15 @@ function ResourcesPage({ onNavigate }) {
 
   return (
     <>
-      <section className="max-w-7xl mx-auto px-6 lg:px-10 pt-16 pb-4">
-        <PageHeader
-          eyebrow={r.eyebrow}
-          title={r.title}
-          copy={r.copy}
-        />
+      <section style={{ background: NAVY }} className="py-16">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <PageHeader
+            eyebrow={r.eyebrow}
+            title={r.title}
+            copy={r.copy}
+            dark
+          />
+        </div>
       </section>
 
       {/* Valuation tool */}
@@ -1665,7 +1889,7 @@ function ResourcesPage({ onNavigate }) {
           <h2 className="font-display text-2xl mb-8" style={{ color: NAVY }}>{r.knowledgeTitle}</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {r.articles.map((a) => (
-              <button key={a.title} onClick={() => onNavigate("contact")} className="text-left">
+              <button key={a.slug} onClick={() => onNavigate("article", a.slug)} className="text-left">
                 <CardShell className="hover:border-[#B8963E]/50 h-full">
                   <span className="font-mono2 text-[12px] tracking-[0.15em] uppercase" style={{ color: BRASS }}>{a.tag}</span>
                   <h3 className="font-display text-xl mt-3 leading-snug" style={{ color: NAVY }}>{a.title}</h3>
@@ -1676,6 +1900,56 @@ function ResourcesPage({ onNavigate }) {
           </div>
         </div>
       </section>
+    </>
+  );
+}
+
+/* ================================================================== */
+/*  PAGE: SINGLE ARTICLE                                               */
+/* ================================================================== */
+
+function ArticlePage({ slug, onNavigate }) {
+  const { lang, t } = useLang();
+  const entry = ARTICLE_CONTENT[slug];
+
+  if (!entry) {
+    return (
+      <section className="max-w-3xl mx-auto px-6 lg:px-10 py-24 text-center">
+        <p style={{ color: SLATE }}>Article not found.</p>
+        <button onClick={() => onNavigate("resources")} className="mt-4 text-base underline" style={{ color: NAVY }}>
+          {t.resources.knowledgeTitle}
+        </button>
+      </section>
+    );
+  }
+
+  const a = entry[lang];
+
+  return (
+    <>
+      <section style={{ background: NAVY }} className="py-16">
+        <div className="max-w-3xl mx-auto px-6 lg:px-10">
+          <button onClick={() => onNavigate("resources")} className="inline-flex items-center gap-1.5 text-sm mb-6" style={{ color: "#B9C4B7" }}>
+            ← {t.resources.knowledgeTitle}
+          </button>
+          <Eyebrow>{a.tag}</Eyebrow>
+          <h1 className="font-display text-4xl mt-4" style={{ color: PAPER }}>{a.title}</h1>
+        </div>
+      </section>
+
+      <section className="max-w-3xl mx-auto px-6 lg:px-10 py-16">
+        {a.body.map((paragraph, i) => (
+          <p key={i} className="text-base leading-relaxed mb-5" style={{ color: INK }}>{paragraph}</p>
+        ))}
+      </section>
+
+      <CTABand
+        title={t.ctaHome.title}
+        copy={t.ctaHome.copy}
+        buttonLabel={t.ctaHome.button}
+        onNavigate={onNavigate}
+        to="contact"
+      />
     </>
   );
 }
@@ -1860,9 +2134,11 @@ const PAGES = {
 export default function Doing2Gether() {
   const [page, setPage] = useState("home");
   const [lang, setLang] = useState("en");
+  const [articleSlug, setArticleSlug] = useState(null);
 
-  const navigate = (key) => {
+  const navigate = (key, slug) => {
     setPage(key);
+    setArticleSlug(slug || null);
     window.scrollTo?.({ top: 0, behavior: "instant" });
   };
 
@@ -1884,7 +2160,11 @@ export default function Doing2Gether() {
 
       <Header page={page} onNavigate={navigate} />
       <main>
-        <Page onNavigate={navigate} />
+        {page === "article" && articleSlug ? (
+          <ArticlePage slug={articleSlug} onNavigate={navigate} />
+        ) : (
+          <Page onNavigate={navigate} />
+        )}
       </main>
       <Footer onNavigate={navigate} />
     </div>
