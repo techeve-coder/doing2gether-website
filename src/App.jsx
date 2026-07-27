@@ -418,16 +418,16 @@ const T = {
 };
 
 
-const NAVY = "#21254A";
-const NAVY_LIGHT = "#2A3060";
-const PAPER = "#F7F4EE";
-const PAPER_DIM = "#EFEBDD";
-const BRASS = "#D98E3F";
-const BRASS_LIGHT = "#E4A15E";
-const INK = "#21223D";
-const SLATE = "#5B5F72";
-const MIST = "#9BA0C2";
-const SAND = "#C9CEE8";
+const NAVY = "#1F3A2E";
+const NAVY_LIGHT = "#26473A";
+const PAPER = "#F6F3E9";
+const PAPER_DIM = "#EFEAD9";
+const BRASS = "#B8963E";
+const BRASS_LIGHT = "#C9AC5C";
+const INK = "#232922";
+const SLATE = "#59635A";
+const MIST = "#8FA093";
+const SAND = "#D4C98A";
 const GOOD = "#4C8B6D";
 const GOOD_LIGHT = "#7FC29D";
 const RISK = "#B23A2E";
@@ -793,7 +793,7 @@ function ScoreBar({ label, value, invert }) {
     <div>
       <div className="flex items-center justify-between mb-1">
         <span className="font-mono2 text-[12px] uppercase tracking-wide" style={{ color: MIST }}>{label}</span>
-        <span className="font-mono2 text-[12px]" style={{ color: "#F7F4EE" }}>{value}</span>
+        <span className="font-mono2 text-[12px]" style={{ color: "#F6F3E9" }}>{value}</span>
       </div>
       <div className="h-1.5 rounded-full bg-white/10 overflow-hidden">
         <div className="h-full rounded-full" style={{ width: `${value}%`, background: color }} />
@@ -816,7 +816,7 @@ function CardShell({ children, className = "" }) {
   return (
     <div
       className={`rounded-sm border p-7 bg-white transition-colors ${className}`}
-      style={{ borderColor: "rgba(33,37,74,0.1)" }}
+      style={{ borderColor: "rgba(31,58,46,0.1)" }}
     >
       {children}
     </div>
@@ -843,7 +843,7 @@ function CTABand({ title, copy, buttonLabel, onNavigate, to }) {
       <div className="rounded-sm px-8 py-14 lg:px-16 lg:py-16 text-center" style={{ background: NAVY }}>
         <Handshake className="w-8 h-8 mx-auto" style={{ color: BRASS }} strokeWidth={1.5} />
         <h2 className="font-display text-4xl lg:text-5xl text-white mt-6 max-w-2xl mx-auto">{title}</h2>
-        <p className="mt-4 max-w-lg mx-auto" style={{ color: "#C7CBE8" }}>{copy}</p>
+        <p className="mt-4 max-w-lg mx-auto" style={{ color: "#B9C4B7" }}>{copy}</p>
         <button
           onClick={() => onNavigate(to)}
           className="inline-flex items-center gap-2 font-medium text-base px-7 py-3.5 rounded-sm mt-8 transition-colors"
@@ -883,7 +883,7 @@ function Header({ page, onNavigate }) {
   ];
 
   return (
-    <header className="sticky top-0 z-40 backdrop-blur border-b" style={{ background: "rgba(247,244,238,0.95)", borderColor: "rgba(33,37,74,0.1)" }}>
+    <header className="sticky top-0 z-40 backdrop-blur border-b" style={{ background: "rgba(246,243,233,0.95)", borderColor: "rgba(31,58,46,0.1)" }}>
       <div style={{ background: NAVY, color: SAND }} className="text-sm">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 h-9 flex items-center justify-between font-mono2 tracking-wide">
           <span className="hidden sm:inline">{t.utility.line}</span>
@@ -943,7 +943,7 @@ function Header({ page, onNavigate }) {
       </div>
 
       {menuOpen && (
-        <div className="lg:hidden border-t px-6 py-5 flex flex-col gap-1 max-h-[75vh] overflow-y-auto" style={{ borderColor: "rgba(33,37,74,0.1)", background: PAPER }}>
+        <div className="lg:hidden border-t px-6 py-5 flex flex-col gap-1 max-h-[75vh] overflow-y-auto" style={{ borderColor: "rgba(31,58,46,0.1)", background: PAPER }}>
           {[...navPrimary, ...navSecondary].map((item) => (
             <button key={item.key} onClick={() => go(item.key)} className="text-left text-base py-2.5" style={{ color: INK }}>
               {Array.isArray(item.label) ? item.label.join(" ") : item.label}
@@ -1028,14 +1028,14 @@ function HomePage({ onNavigate }) {
             <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl leading-[1.08] mt-5 max-w-xl">
               {t.hero.title}
             </h1>
-            <p className="mt-6 text-xl max-w-lg leading-relaxed" style={{ color: "#C7CBE8" }}>
+            <p className="mt-6 text-xl max-w-lg leading-relaxed" style={{ color: "#B9C4B7" }}>
               {t.hero.copy}
             </p>
             <div className="mt-9 flex flex-wrap gap-4">
               <button onClick={() => onNavigate("buy")} className="inline-flex items-center gap-2 font-medium text-base px-6 py-3.5 rounded-sm transition-colors" style={{ background: BRASS, color: NAVY }}>
                 {t.hero.browse} <ArrowRight className="w-4 h-4" />
               </button>
-              <button onClick={() => onNavigate("resources")} className="inline-flex items-center gap-2 border text-base px-6 py-3.5 rounded-sm transition-colors" style={{ borderColor: "rgba(247,244,238,0.3)", color: PAPER }}>
+              <button onClick={() => onNavigate("resources")} className="inline-flex items-center gap-2 border text-base px-6 py-3.5 rounded-sm transition-colors" style={{ borderColor: "rgba(246,243,233,0.3)", color: PAPER }}>
                 {t.hero.valuation}
               </button>
             </div>
@@ -1079,7 +1079,7 @@ function HomePage({ onNavigate }) {
         </div>
       </section>
 
-      <section className="border-b bg-white" style={{ borderColor: "rgba(33,37,74,0.1)" }}>
+      <section className="border-b bg-white" style={{ borderColor: "rgba(31,58,46,0.1)" }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-10 py-10 grid grid-cols-2 lg:grid-cols-4 gap-8">
           {t.stats.map((s) => (
             <div key={s.label}>
@@ -1115,11 +1115,11 @@ function HomePage({ onNavigate }) {
       </section>
 
       {/* Why Choose Us */}
-      <section className="max-w-7xl mx-auto px-6 lg:px-10 py-20 lg:py-28" style={{ borderTop: "1px solid rgba(33,37,74,0.1)" }}>
+      <section className="max-w-7xl mx-auto px-6 lg:px-10 py-20 lg:py-28" style={{ borderTop: "1px solid rgba(31,58,46,0.1)" }}>
         <Eyebrow>{t.whyChoose.eyebrow}</Eyebrow>
         <h2 className="font-display text-4xl lg:text-5xl mt-4" style={{ color: NAVY }}>{t.whyChoose.title}</h2>
         <div className="grid md:grid-cols-2 gap-6 mt-12">
-          <CardShell className="hover:border-[#D98E3F]/60">
+          <CardShell className="hover:border-[#B8963E]/60">
             <Building2 className="w-6 h-6" style={{ color: BRASS }} strokeWidth={1.5} />
             <h3 className="font-display text-2xl mt-5" style={{ color: NAVY }}>{t.whyChoose.buyerTitle}</h3>
             <p className="text-base leading-relaxed mt-2" style={{ color: SLATE }}>
@@ -1132,7 +1132,7 @@ function HomePage({ onNavigate }) {
               {t.whyChoose.buyerCta} <ArrowUpRight className="w-4 h-4" />
             </button>
           </CardShell>
-          <CardShell className="hover:border-[#D98E3F]/60">
+          <CardShell className="hover:border-[#B8963E]/60">
             <TrendingUp className="w-6 h-6" style={{ color: BRASS }} strokeWidth={1.5} />
             <h3 className="font-display text-2xl mt-5" style={{ color: NAVY }}>{t.whyChoose.sellerTitle}</h3>
             <p className="text-base leading-relaxed mt-2" style={{ color: SLATE }}>
@@ -1160,7 +1160,7 @@ function HomePage({ onNavigate }) {
                 <p className="font-mono2 text-[12px] tracking-[0.15em] uppercase" style={{ color: BRASS }}>{tier}</p>
                 <ul className="mt-4 space-y-2">
                   {t.industries.tiers[tier].map((item) => (
-                    <li key={item} className="text-base" style={{ color: "#CDD1EA" }}>{item}</li>
+                    <li key={item} className="text-base" style={{ color: "#C3CDBF" }}>{item}</li>
                   ))}
                 </ul>
               </div>
@@ -1188,7 +1188,7 @@ function ListingCard({ l }) {
   const { t } = useLang();
   const lb = t.buy.labels;
   return (
-    <div className="border border-white/10 rounded-sm p-7 hover:border-[#D98E3F]/50 transition-colors" style={{ background: NAVY_LIGHT }}>
+    <div className="border border-white/10 rounded-sm p-7 hover:border-[#B8963E]/50 transition-colors" style={{ background: NAVY_LIGHT }}>
       <div className="flex items-center justify-between flex-wrap gap-2">
         <span className="font-mono2 text-[12px] tracking-[0.15em] uppercase" style={{ color: MIST }}>{l.industry}</span>
         <span className="font-mono2 text-[12px] tracking-[0.1em] uppercase px-2 py-1 rounded-sm" style={{ background: BRASS, color: NAVY }}>{l.tag}</span>
@@ -1215,7 +1215,7 @@ function ListingCard({ l }) {
         {[[lb.years, l.years], [lb.employees, l.employees], [lb.leaseLeft, l.leaseRemaining]].map(([label, value]) => (
           <div key={label}>
             <p className="font-mono2 text-[12px] uppercase" style={{ color: MIST }}>{label}</p>
-            <p className="font-mono2 mt-1" style={{ color: "#CDD1EA" }}>{value}</p>
+            <p className="font-mono2 mt-1" style={{ color: "#C3CDBF" }}>{value}</p>
           </div>
         ))}
       </div>
@@ -1312,7 +1312,7 @@ function SellPage({ onNavigate }) {
             <h1 className="font-display text-4xl lg:text-5xl mt-4 max-w-2xl">
               {t.sell.title}
             </h1>
-            <p className="mt-4 max-w-xl" style={{ color: "#C7CBE8" }}>
+            <p className="mt-4 max-w-xl" style={{ color: "#B9C4B7" }}>
               {t.sell.copy}
             </p>
             <button onClick={() => onNavigate("resources")} className="inline-flex items-center gap-2 font-medium text-base px-6 py-3.5 rounded-sm mt-8 transition-colors" style={{ background: BRASS, color: NAVY }}>
@@ -1348,11 +1348,11 @@ function SellPage({ onNavigate }) {
       </section>
 
       {/* Process */}
-      <section style={{ background: PAPER_DIM, borderColor: "rgba(33,37,74,0.1)" }} className="py-20 lg:py-28 border-y">
+      <section style={{ background: PAPER_DIM, borderColor: "rgba(31,58,46,0.1)" }} className="py-20 lg:py-28 border-y">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <Eyebrow>{t.sell.processEyebrow}</Eyebrow>
           <h2 className="font-display text-4xl lg:text-5xl mt-4" style={{ color: NAVY }}>{t.sell.processTitle}</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-px mt-12 rounded-sm overflow-hidden" style={{ background: "rgba(33,37,74,0.1)" }}>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-px mt-12 rounded-sm overflow-hidden" style={{ background: "rgba(31,58,46,0.1)" }}>
             {t.sell.processSteps.map((step, i) => (
               <div key={step} className="bg-white p-6">
                 <span className="font-mono2 text-base" style={{ color: BRASS }}>{String(i + 1).padStart(2, "0")}</span>
@@ -1398,7 +1398,7 @@ function E2Page({ onNavigate }) {
             <h1 className="font-display text-4xl lg:text-5xl mt-4 max-w-2xl">
               {t.e2.title}
             </h1>
-            <p className="mt-4 max-w-xl" style={{ color: "#C7CBE8" }}>
+            <p className="mt-4 max-w-xl" style={{ color: "#B9C4B7" }}>
               {t.e2.copy}
             </p>
             <div className="flex items-center gap-3 mt-8 p-4 border border-white/10 rounded-sm max-w-xl" style={{ background: NAVY_LIGHT }}>
@@ -1428,7 +1428,7 @@ function E2Page({ onNavigate }) {
       </section>
 
       {/* Roadmap */}
-      <section style={{ background: PAPER_DIM, borderColor: "rgba(33,37,74,0.1)" }} className="py-20 lg:py-28 border-y">
+      <section style={{ background: PAPER_DIM, borderColor: "rgba(31,58,46,0.1)" }} className="py-20 lg:py-28 border-y">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <Eyebrow>{t.e2.roadmapEyebrow}</Eyebrow>
           <h2 className="font-display text-4xl lg:text-5xl mt-4" style={{ color: NAVY }}>{t.e2.roadmapTitle}</h2>
@@ -1439,7 +1439,7 @@ function E2Page({ onNavigate }) {
                   <span className="w-9 h-9 rounded-full flex items-center justify-center font-mono2 text-sm shrink-0" style={{ background: NAVY, color: BRASS }}>
                     {i + 1}
                   </span>
-                  {i < t.e2.roadmap.length - 1 && <span className="w-px h-8" style={{ background: "rgba(33,37,74,0.25)" }} />}
+                  {i < t.e2.roadmap.length - 1 && <span className="w-px h-8" style={{ background: "rgba(31,58,46,0.25)" }} />}
                 </div>
                 <p className="py-2 text-base sm:text-lg" style={{ color: NAVY }}>{step}</p>
               </div>
@@ -1454,7 +1454,7 @@ function E2Page({ onNavigate }) {
         <h2 className="font-display text-4xl mt-4" style={{ color: NAVY }}>{t.e2.idealTitle}</h2>
         <div className="flex flex-wrap gap-3 mt-8">
           {t.e2.industries.map((i) => (
-            <span key={i} className="text-base px-4 py-2 rounded-full border" style={{ borderColor: "rgba(33,37,74,0.15)", color: NAVY }}>{i}</span>
+            <span key={i} className="text-base px-4 py-2 rounded-full border" style={{ borderColor: "rgba(31,58,46,0.15)", color: NAVY }}>{i}</span>
           ))}
         </div>
       </section>
@@ -1485,7 +1485,7 @@ function InternationalPage({ onNavigate }) {
             <h1 className="font-display text-4xl lg:text-5xl mt-4 max-w-2xl">
               {t.international.title}
             </h1>
-            <p className="mt-4 max-w-xl" style={{ color: "#C7CBE8" }}>
+            <p className="mt-4 max-w-xl" style={{ color: "#B9C4B7" }}>
               {t.international.copy}
             </p>
           </div>
@@ -1505,7 +1505,7 @@ function InternationalPage({ onNavigate }) {
           <Eyebrow>{t.international.countriesEyebrow}</Eyebrow>
           <div className="grid grid-cols-2 gap-3 mt-6">
             {t.international.countries.map((c) => (
-              <div key={c} className="flex items-center gap-2.5 text-base border rounded-sm px-4 py-3" style={{ borderColor: "rgba(33,37,74,0.12)", color: NAVY }}>
+              <div key={c} className="flex items-center gap-2.5 text-base border rounded-sm px-4 py-3" style={{ borderColor: "rgba(31,58,46,0.12)", color: NAVY }}>
                 <Globe2 className="w-4 h-4" style={{ color: BRASS }} strokeWidth={1.5} />
                 {c}
               </div>
@@ -1555,7 +1555,7 @@ function ServicesPage({ onNavigate }) {
         </div>
       </section>
 
-      <section style={{ background: PAPER_DIM, borderColor: "rgba(33,37,74,0.1)" }} className="py-16 border-y">
+      <section style={{ background: PAPER_DIM, borderColor: "rgba(31,58,46,0.1)" }} className="py-16 border-y">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <h2 className="font-display text-3xl" style={{ color: NAVY }}>{t.services.sellerTitle}</h2>
           <div className="mt-8">
@@ -1613,29 +1613,29 @@ function ResourcesPage({ onNavigate }) {
           <div className="space-y-7">
             <div>
               <label className="text-base font-medium" style={{ color: NAVY }}>{r.revenueLabel}</label>
-              <input type="range" min="200000" max="10000000" step="50000" value={revenue} onChange={(e) => setRevenue(Number(e.target.value))} className="w-full mt-3 accent-[#D98E3F]" />
+              <input type="range" min="200000" max="10000000" step="50000" value={revenue} onChange={(e) => setRevenue(Number(e.target.value))} className="w-full mt-3 accent-[#B8963E]" />
               <p className="font-mono2 text-base mt-1" style={{ color: SLATE }}>{fmt(revenue)}</p>
             </div>
             <div>
               <label className="text-base font-medium" style={{ color: NAVY }}>{r.cashFlowLabel}</label>
-              <input type="range" min="50000" max="2000000" step="10000" value={cashFlow} onChange={(e) => setCashFlow(Number(e.target.value))} className="w-full mt-3 accent-[#D98E3F]" />
+              <input type="range" min="50000" max="2000000" step="10000" value={cashFlow} onChange={(e) => setCashFlow(Number(e.target.value))} className="w-full mt-3 accent-[#B8963E]" />
               <p className="font-mono2 text-base mt-1" style={{ color: SLATE }}>{fmt(cashFlow)}</p>
             </div>
             <div>
               <label className="text-base font-medium" style={{ color: NAVY }}>{r.industryLabel}</label>
-              <select value={industry} onChange={(e) => setIndustry(e.target.value)} className="w-full mt-3 border rounded-sm px-4 py-3 text-base" style={{ borderColor: "rgba(33,37,74,0.2)", color: NAVY }}>
+              <select value={industry} onChange={(e) => setIndustry(e.target.value)} className="w-full mt-3 border rounded-sm px-4 py-3 text-base" style={{ borderColor: "rgba(31,58,46,0.2)", color: NAVY }}>
                 {Object.keys(INDUSTRY_MULTIPLES).map((i) => <option key={i}>{i}</option>)}
               </select>
             </div>
             <div className="grid sm:grid-cols-2 gap-6">
               <div>
                 <label className="text-base font-medium" style={{ color: NAVY }}>{r.yearsLabel}</label>
-                <input type="range" min="0" max="30" value={years} onChange={(e) => setYears(Number(e.target.value))} className="w-full mt-3 accent-[#D98E3F]" />
+                <input type="range" min="0" max="30" value={years} onChange={(e) => setYears(Number(e.target.value))} className="w-full mt-3 accent-[#B8963E]" />
                 <p className="font-mono2 text-base mt-1" style={{ color: SLATE }}>{years} {r.years}</p>
               </div>
               <div>
                 <label className="text-base font-medium" style={{ color: NAVY }}>{r.growthLabel}</label>
-                <input type="range" min="-10" max="30" value={growth} onChange={(e) => setGrowth(Number(e.target.value))} className="w-full mt-3 accent-[#D98E3F]" />
+                <input type="range" min="-10" max="30" value={growth} onChange={(e) => setGrowth(Number(e.target.value))} className="w-full mt-3 accent-[#B8963E]" />
                 <p className="font-mono2 text-base mt-1" style={{ color: SLATE }}>{growth}%</p>
               </div>
             </div>
@@ -1660,13 +1660,13 @@ function ResourcesPage({ onNavigate }) {
       </section>
 
       {/* Knowledge center */}
-      <section style={{ background: PAPER_DIM, borderColor: "rgba(33,37,74,0.1)" }} className="py-16 border-t">
+      <section style={{ background: PAPER_DIM, borderColor: "rgba(31,58,46,0.1)" }} className="py-16 border-t">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <h2 className="font-display text-2xl mb-8" style={{ color: NAVY }}>{r.knowledgeTitle}</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {r.articles.map((a) => (
               <button key={a.title} onClick={() => onNavigate("contact")} className="text-left">
-                <CardShell className="hover:border-[#D98E3F]/50 h-full">
+                <CardShell className="hover:border-[#B8963E]/50 h-full">
                   <span className="font-mono2 text-[12px] tracking-[0.15em] uppercase" style={{ color: BRASS }}>{a.tag}</span>
                   <h3 className="font-display text-xl mt-3 leading-snug" style={{ color: NAVY }}>{a.title}</h3>
                   <span className="inline-flex items-center gap-1.5 text-sm mt-4" style={{ color: SLATE }}>{r.readArticle} <ArrowUpRight className="w-3.5 h-3.5" /></span>
@@ -1700,7 +1700,7 @@ function AboutPage({ onNavigate }) {
             <h1 className="font-display text-4xl lg:text-5xl mt-4 max-w-2xl">
               {t.about.title}
             </h1>
-            <p className="mt-4 max-w-xl" style={{ color: "#C7CBE8" }}>
+            <p className="mt-4 max-w-xl" style={{ color: "#B9C4B7" }}>
               {t.about.copy}
             </p>
           </div>
@@ -1721,7 +1721,7 @@ function AboutPage({ onNavigate }) {
         })}
       </section>
 
-      <section style={{ background: PAPER_DIM, borderColor: "rgba(33,37,74,0.1)" }} className="py-16 border-y">
+      <section style={{ background: PAPER_DIM, borderColor: "rgba(31,58,46,0.1)" }} className="py-16 border-y">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <Eyebrow>{t.about.networkEyebrow}</Eyebrow>
           <h2 className="font-display text-3xl mt-4" style={{ color: NAVY }}>{t.about.networkTitle}</h2>
@@ -1761,14 +1761,14 @@ function ContactPage() {
         <p className="mt-4 leading-relaxed" style={{ color: SLATE }}>
           {c.copy}
         </p>
-        <div className="mt-6 flex items-center gap-3 p-4 rounded-sm border" style={{ borderColor: "rgba(33,37,74,0.12)", background: "white" }}>
+        <div className="mt-6 flex items-center gap-3 p-4 rounded-sm border" style={{ borderColor: "rgba(31,58,46,0.12)", background: "white" }}>
           <span className="w-11 h-11 rounded-full flex items-center justify-center font-display text-base shrink-0" style={{ background: NAVY, color: BRASS }}>TE</span>
           <div>
             <p className="text-base font-medium" style={{ color: NAVY }}>Tomas Echeverria</p>
             <p className="text-sm" style={{ color: SLATE }}>{c.advisorRole}</p>
           </div>
         </div>
-        <div className="mt-3 flex items-center gap-3 p-4 rounded-sm border" style={{ borderColor: "rgba(33,37,74,0.12)", background: "white" }}>
+        <div className="mt-3 flex items-center gap-3 p-4 rounded-sm border" style={{ borderColor: "rgba(31,58,46,0.12)", background: "white" }}>
           <span className="w-11 h-11 rounded-full flex items-center justify-center font-display text-base shrink-0" style={{ background: NAVY, color: BRASS }}>MS</span>
           <div>
             <p className="text-base font-medium" style={{ color: NAVY }}>Maria Saad</p>
@@ -1783,7 +1783,7 @@ function ContactPage() {
         </div>
       </div>
 
-      <div className="rounded-sm p-8 border" style={{ borderColor: "rgba(33,37,74,0.1)", background: "white" }}>
+      <div className="rounded-sm p-8 border" style={{ borderColor: "rgba(31,58,46,0.1)", background: "white" }}>
         {submitted ? (
           <div className="py-10 text-center">
             <ShieldCheck className="w-8 h-8 mx-auto" style={{ color: GOOD }} strokeWidth={1.5} />
@@ -1802,7 +1802,7 @@ function ContactPage() {
                     onClick={() => setRoleIndex(i)}
                     className="text-sm py-2.5 rounded-sm border transition-colors"
                     style={{
-                      borderColor: roleIndex === i ? BRASS : "rgba(33,37,74,0.15)",
+                      borderColor: roleIndex === i ? BRASS : "rgba(31,58,46,0.15)",
                       background: roleIndex === i ? BRASS : "transparent",
                       color: roleIndex === i ? NAVY : SLATE,
                       fontWeight: roleIndex === i ? 600 : 400,
@@ -1816,20 +1816,20 @@ function ContactPage() {
             <div className="grid sm:grid-cols-2 gap-5">
               <div>
                 <label className="text-base font-medium" style={{ color: NAVY }}>{c.fullName}</label>
-                <input required type="text" className="w-full mt-2 border rounded-sm px-4 py-3 text-base" style={{ borderColor: "rgba(33,37,74,0.2)" }} />
+                <input required type="text" className="w-full mt-2 border rounded-sm px-4 py-3 text-base" style={{ borderColor: "rgba(31,58,46,0.2)" }} />
               </div>
               <div>
                 <label className="text-base font-medium" style={{ color: NAVY }}>{c.email}</label>
-                <input required type="email" className="w-full mt-2 border rounded-sm px-4 py-3 text-base" style={{ borderColor: "rgba(33,37,74,0.2)" }} />
+                <input required type="email" className="w-full mt-2 border rounded-sm px-4 py-3 text-base" style={{ borderColor: "rgba(31,58,46,0.2)" }} />
               </div>
             </div>
             <div>
               <label className="text-base font-medium" style={{ color: NAVY }}>{c.phone}</label>
-              <input type="tel" className="w-full mt-2 border rounded-sm px-4 py-3 text-base" style={{ borderColor: "rgba(33,37,74,0.2)" }} />
+              <input type="tel" className="w-full mt-2 border rounded-sm px-4 py-3 text-base" style={{ borderColor: "rgba(31,58,46,0.2)" }} />
             </div>
             <div>
               <label className="text-base font-medium" style={{ color: NAVY }}>{c.howHelp}</label>
-              <textarea rows={4} className="w-full mt-2 border rounded-sm px-4 py-3 text-base" style={{ borderColor: "rgba(33,37,74,0.2)" }} />
+              <textarea rows={4} className="w-full mt-2 border rounded-sm px-4 py-3 text-base" style={{ borderColor: "rgba(31,58,46,0.2)" }} />
             </div>
             <button type="submit" className="w-full inline-flex items-center justify-center gap-2 font-medium text-base px-6 py-3.5 rounded-sm transition-colors" style={{ background: NAVY, color: "white" }}>
               {c.send} <ArrowRight className="w-4 h-4" />
@@ -1879,7 +1879,7 @@ export default function Doing2Gether() {
         @keyframes ledgerScroll { 0% { transform: translateY(0); } 100% { transform: translateY(-50%); } }
         .ledger-track { animation: ledgerScroll 26s linear infinite; }
         @media (prefers-reduced-motion: reduce) { .ledger-track { animation: none; } }
-        input[type="range"] { height: 4px; border-radius: 999px; background: rgba(33,37,74,0.12); }
+        input[type="range"] { height: 4px; border-radius: 999px; background: rgba(31,58,46,0.12); }
       `}</style>
 
       <Header page={page} onNavigate={navigate} />
