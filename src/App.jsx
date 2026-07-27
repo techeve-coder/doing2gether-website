@@ -101,6 +101,8 @@ const T = {
         { title: "Risk Analysis", items: ["Owner Dependence", "Customer Concentration", "Supplier Risk", "Lease Risk", "Regulatory Risk", "Market Saturation"] },
       ],
       ctaTitle: "Not seeing the right fit?", ctaCopy: "Tell us your budget and industry — we'll run a custom search.", ctaButton: "Start a buyer consultation",
+      noListingsTitle: "New listings added regularly.",
+      noListingsCopy: "We don't publish every opportunity — many are off-market. Tell us what you're looking for and we'll run a custom search, including businesses not listed here.",
       labels: { asking: "Asking", downPmt: "Down Pmt.", financing: "Financing", grossRev: "Gross Rev.", sde: "SDE", ebitda: "EBITDA", years: "Years", employees: "Employees", leaseLeft: "Lease Left", roi: "ROI", payback: "Payback", cashOnCash: "Cash-on-Cash", dscr: "DSCR", profitability: "Profitability", risk: "Risk (lower is better)", scalability: "Scalability", ownerDependence: "Owner Dependence" },
     },
     sell: {
@@ -285,6 +287,8 @@ const T = {
         { title: "Análisis de Riesgo", items: ["Dependencia del Propietario", "Concentración de Clientes", "Riesgo de Proveedores", "Riesgo de Arrendamiento", "Riesgo Regulatorio", "Saturación del Mercado"] },
       ],
       ctaTitle: "¿Aún no encuentra su negocio?", ctaCopy: "Cuéntenos su presupuesto e industria — haremos una búsqueda personalizada.", ctaButton: "Iniciar una consulta para compradores",
+      noListingsTitle: "Agregamos nuevos listados regularmente.",
+      noListingsCopy: "No publicamos cada oportunidad — muchas están fuera del mercado. Cuéntenos qué busca y haremos una búsqueda personalizada, incluyendo negocios que no aparecen aquí.",
       labels: { asking: "Precio", downPmt: "Pago Inicial", financing: "Financiamiento", grossRev: "Ingresos Brutos", sde: "SDE", ebitda: "EBITDA", years: "Años", employees: "Empleados", leaseLeft: "Arrendamiento Restante", roi: "ROI", payback: "Recuperación", cashOnCash: "Retorno sobre Efectivo", dscr: "DSCR", profitability: "Rentabilidad", risk: "Riesgo (menor es mejor)", scalability: "Escalabilidad", ownerDependence: "Dependencia del Propietario" },
     },
     sell: {
@@ -676,104 +680,9 @@ const INDUSTRY_TIERS = {
   ],
 };
 
-const LISTINGS = [
-  {
-    industry: "Home & Commercial Services",
-    title: "Multi-Route Pest Control Company",
-    location: "Broward County, FL",
-    askingPrice: "$3,150,000",
-    downPayment: "$630,000",
-    sellerFinancing: "Yes, 15%",
-    grossRevenue: "$2,400,000",
-    sde: "$780,000",
-    ebitda: "$710,000",
-    years: 11,
-    employees: 14,
-    reason: "Retirement",
-    rent: "$4,200/mo",
-    leaseRemaining: "4 years",
-    roi: "24.8%",
-    payback: "4.0 yrs",
-    cashOnCash: "22.1%",
-    dscr: "1.6x",
-    growth: "+9% YoY",
-    scores: { profitability: 88, risk: 22, scalability: 76, ownerInvolvement: 30, visaFriendly: 95 },
-    rating: 5,
-    tag: "E-2 Eligible",
-  },
-  {
-    industry: "Hospitality & Food Service",
-    title: "Established Café & Catering Brand, 2 Units",
-    location: "Palm Beach County, FL",
-    askingPrice: "$1,890,000",
-    downPayment: "$425,000",
-    sellerFinancing: "Yes, 10%",
-    grossRevenue: "$1,600,000",
-    sde: "$410,000",
-    ebitda: "$365,000",
-    years: 7,
-    employees: 22,
-    reason: "Relocation",
-    rent: "$6,800/mo (2 units)",
-    leaseRemaining: "6 years",
-    roi: "19.2%",
-    payback: "4.6 yrs",
-    cashOnCash: "17.5%",
-    dscr: "1.3x",
-    growth: "+5% YoY",
-    scores: { profitability: 72, risk: 40, scalability: 68, ownerInvolvement: 55, visaFriendly: 90 },
-    rating: 4,
-    tag: "Owner Financing",
-  },
-  {
-    industry: "Health & Wellness",
-    title: "Med-Spa with Physician Oversight",
-    location: "Miami-Dade County, FL",
-    askingPrice: "$2,475,000",
-    downPayment: "$495,000",
-    sellerFinancing: "No",
-    grossRevenue: "$1,900,000",
-    sde: "$560,000",
-    ebitda: "$520,000",
-    years: 5,
-    employees: 9,
-    reason: "Owner pursuing new venture",
-    rent: "$5,100/mo",
-    leaseRemaining: "5 years",
-    roi: "22.4%",
-    payback: "4.2 yrs",
-    cashOnCash: "20.9%",
-    dscr: "1.7x",
-    growth: "+14% YoY",
-    scores: { profitability: 91, risk: 35, scalability: 82, ownerInvolvement: 40, visaFriendly: 85 },
-    rating: 5,
-    tag: "E-2 Eligible",
-  },
-  {
-    industry: "Logistics & Distribution",
-    title: "Regional Cold-Chain Distribution Co.",
-    location: "Miami-Dade County, FL",
-    askingPrice: "$5,600,000",
-    downPayment: "$1,400,000",
-    sellerFinancing: "No",
-    grossRevenue: "$6,200,000",
-    sde: "$1,150,000",
-    ebitda: "$1,100,000",
-    years: 16,
-    employees: 38,
-    reason: "Succession, no family successor",
-    rent: "$11,500/mo",
-    leaseRemaining: "8 years",
-    roi: "18.6%",
-    payback: "5.1 yrs",
-    cashOnCash: "16.2%",
-    dscr: "1.4x",
-    growth: "+7% YoY",
-    scores: { profitability: 80, risk: 28, scalability: 90, ownerInvolvement: 20, visaFriendly: 60 },
-    rating: 4,
-    tag: "New to Market",
-  },
-];
+// No active listings are currently loaded. Add real, current listings here as they
+// become available -- each item follows the same shape used by ListingCard below.
+const LISTINGS = [];
 
 const E2_REQUIREMENTS = [
   { title: "Treaty Country Nationality", copy: "You must hold citizenship in a country that maintains a qualifying treaty of commerce with the United States." },
@@ -1234,7 +1143,12 @@ function Footer({ onNavigate }) {
 
 function HomePage({ onNavigate }) {
   const { t } = useLang();
-  const LEDGER = LISTINGS.map((l) => ({ type: l.title, county: l.location.split(",")[0], multiple: "3.9x EBITDA", status: "CLOSED" }));
+  const LEDGER = [
+    { type: "Home Services Company", county: "Broward County", multiple: "3.9x EBITDA", status: "CLOSED" },
+    { type: "Restaurant Group", county: "Miami-Dade County", multiple: "3.6x EBITDA", status: "CLOSED" },
+    { type: "Health & Wellness Business", county: "Palm Beach County", multiple: "4.1x EBITDA", status: "CLOSED" },
+    { type: "Distribution Company", county: "Miami-Dade County", multiple: "3.4x EBITDA", status: "CLOSED" },
+  ];
   return (
     <>
       <section style={{ background: NAVY, color: PAPER }} className="relative overflow-hidden">
@@ -1482,8 +1396,21 @@ function BuyPage({ onNavigate }) {
       </section>
 
       <section className="py-16">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 grid md:grid-cols-2 gap-6">
-          {LISTINGS.map((l) => <ListingCard key={l.title} l={l} />)}
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          {LISTINGS.length > 0 ? (
+            <div className="grid md:grid-cols-2 gap-6">
+              {LISTINGS.map((l) => <ListingCard key={l.title} l={l} />)}
+            </div>
+          ) : (
+            <div className="rounded-sm border p-12 text-center max-w-xl mx-auto" style={{ borderColor: "rgba(31,58,46,0.15)" }}>
+              <Building2 className="w-6 h-6 mx-auto" style={{ color: BRASS }} strokeWidth={1.5} />
+              <h3 className="font-display text-2xl mt-4" style={{ color: NAVY }}>{t.buy.noListingsTitle}</h3>
+              <p className="mt-3 leading-relaxed" style={{ color: SLATE }}>{t.buy.noListingsCopy}</p>
+              <button onClick={() => onNavigate("contact")} className="inline-flex items-center gap-2 font-medium text-base px-6 py-3.5 rounded-sm mt-6 transition-colors" style={{ background: BRASS, color: NAVY }}>
+                {t.buy.ctaButton} <ArrowRight className="w-4 h-4" />
+              </button>
+            </div>
+          )}
         </div>
       </section>
 
@@ -2019,10 +1946,35 @@ function ContactPage() {
   const c = t.contact;
   const [roleIndex, setRoleIndex] = useState(0);
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState(false);
 
-  const handleSubmit = (e) => {
+  const FORMSPREE_ENDPOINT = "https://formspree.io/f/mlgqzrbz";
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
+    setSending(true);
+    setError(false);
+    const form = e.target;
+    const formData = new FormData(form);
+    formData.set("role", c.roles[roleIndex]);
+    formData.set("_subject", `New Doing2Gether inquiry — ${c.roles[roleIndex]}`);
+    try {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        body: formData,
+        headers: { Accept: "application/json" },
+      });
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        setError(true);
+      }
+    } catch (err) {
+      setError(true);
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -2090,23 +2042,28 @@ function ContactPage() {
             <div className="grid sm:grid-cols-2 gap-5">
               <div>
                 <label className="text-base font-medium" style={{ color: NAVY }}>{c.fullName}</label>
-                <input required type="text" className="w-full mt-2 border rounded-sm px-4 py-3 text-base" style={{ borderColor: "rgba(31,58,46,0.2)" }} />
+                <input required name="name" type="text" className="w-full mt-2 border rounded-sm px-4 py-3 text-base" style={{ borderColor: "rgba(31,58,46,0.2)" }} />
               </div>
               <div>
                 <label className="text-base font-medium" style={{ color: NAVY }}>{c.email}</label>
-                <input required type="email" className="w-full mt-2 border rounded-sm px-4 py-3 text-base" style={{ borderColor: "rgba(31,58,46,0.2)" }} />
+                <input required name="email" type="email" className="w-full mt-2 border rounded-sm px-4 py-3 text-base" style={{ borderColor: "rgba(31,58,46,0.2)" }} />
               </div>
             </div>
             <div>
               <label className="text-base font-medium" style={{ color: NAVY }}>{c.phone}</label>
-              <input type="tel" className="w-full mt-2 border rounded-sm px-4 py-3 text-base" style={{ borderColor: "rgba(31,58,46,0.2)" }} />
+              <input name="phone" type="tel" className="w-full mt-2 border rounded-sm px-4 py-3 text-base" style={{ borderColor: "rgba(31,58,46,0.2)" }} />
             </div>
             <div>
               <label className="text-base font-medium" style={{ color: NAVY }}>{c.howHelp}</label>
-              <textarea rows={4} className="w-full mt-2 border rounded-sm px-4 py-3 text-base" style={{ borderColor: "rgba(31,58,46,0.2)" }} />
+              <textarea name="message" rows={4} className="w-full mt-2 border rounded-sm px-4 py-3 text-base" style={{ borderColor: "rgba(31,58,46,0.2)" }} />
             </div>
-            <button type="submit" className="w-full inline-flex items-center justify-center gap-2 font-medium text-base px-6 py-3.5 rounded-sm transition-colors" style={{ background: NAVY, color: "white" }}>
-              {c.send} <ArrowRight className="w-4 h-4" />
+            {error && (
+              <p className="text-sm" style={{ color: "#B23A2E" }}>
+                Something went wrong sending your request. Please try again, or reach us directly at info@doing2gether.com.
+              </p>
+            )}
+            <button type="submit" disabled={sending} className="w-full inline-flex items-center justify-center gap-2 font-medium text-base px-6 py-3.5 rounded-sm transition-colors" style={{ background: NAVY, color: "white", opacity: sending ? 0.7 : 1 }}>
+              {sending ? "Sending…" : c.send} <ArrowRight className="w-4 h-4" />
             </button>
           </form>
         )}
