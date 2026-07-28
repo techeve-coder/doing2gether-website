@@ -49,15 +49,7 @@ const T = {
       browse: "Browse businesses for sale", valuation: "Free business valuation",
       schedule: "Schedule a consultation", e2buyers: "E-2 visa buyers",
       license: "Licensed business brokers · Florida DBPR",
-      ledgerTitle: "The Ledger — Recent Activity",
-      ledgerNote: "Illustrative deal activity. Figures rounded; details withheld under NDA.",
     },
-    stats: [
-      { value: "$412M", label: "Aggregate transaction value" },
-      { value: "286", label: "Businesses closed since 2011" },
-      { value: "61", label: "Countries represented by buyers" },
-      { value: "94 days", label: "Median days to close" },
-    ],
     howWeWork: {
       eyebrow: "How We Do Business", title: "Doing2Gether — the name is the method.",
       copy: "We do the work together with you, from the first call to closing, built around what you need and structured for the most value.",
@@ -235,15 +227,7 @@ const T = {
       browse: "Ver negocios en venta", valuation: "Valoración gratuita del negocio",
       schedule: "Agendar una consulta", e2buyers: "Compradores con visa E-2",
       license: "Corredores de negocios con licencia · DBPR de Florida",
-      ledgerTitle: "El Libro Mayor — Actividad Reciente",
-      ledgerNote: "Actividad ilustrativa. Cifras redondeadas; detalles reservados bajo confidencialidad.",
     },
-    stats: [
-      { value: "$412M", label: "Valor total de transacciones" },
-      { value: "286", label: "Negocios cerrados desde 2011" },
-      { value: "61", label: "Países representados por compradores" },
-      { value: "94 días", label: "Mediana de días para cerrar" },
-    ],
     howWeWork: {
       eyebrow: "Cómo Hacemos Negocios", title: "Doing2Gether — el nombre es el método.",
       copy: "Hacemos el trabajo junto a usted, desde la primera llamada hasta el cierre, a la medida de sus necesidades.",
@@ -1143,12 +1127,6 @@ function Footer({ onNavigate }) {
 
 function HomePage({ onNavigate }) {
   const { t } = useLang();
-  const LEDGER = [
-    { type: "Home Services Company", county: "Broward County", multiple: "3.9x EBITDA", status: "CLOSED" },
-    { type: "Restaurant Group", county: "Miami-Dade County", multiple: "3.6x EBITDA", status: "CLOSED" },
-    { type: "Health & Wellness Business", county: "Palm Beach County", multiple: "4.1x EBITDA", status: "CLOSED" },
-    { type: "Distribution Company", county: "Miami-Dade County", multiple: "3.4x EBITDA", status: "CLOSED" },
-  ];
   return (
     <>
       <section style={{ background: NAVY, color: PAPER }} className="relative overflow-hidden">
@@ -1178,45 +1156,7 @@ function HomePage({ onNavigate }) {
             </p>
           </div>
 
-          <div className="relative space-y-6">
-            <PageArt variant="home" />
-            <div className="border border-white/10 rounded-sm overflow-hidden" style={{ background: NAVY_LIGHT }}>
-              <div className="flex items-center justify-between px-5 py-3 border-b border-white/10">
-                <span className="font-mono2 text-[13px] tracking-[0.15em] uppercase" style={{ color: MIST }}>{t.hero.ledgerTitle}</span>
-                <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: GOOD_LIGHT }} />
-              </div>
-              <div className="h-[340px] overflow-hidden relative">
-                <div className="ledger-track">
-                  {[...LEDGER, ...LEDGER, ...LEDGER, ...LEDGER].map((row, i) => (
-                    <div key={i} className="flex items-center justify-between gap-4 px-5 py-4 border-b border-white/5">
-                      <div className="min-w-0">
-                        <p className="text-base truncate" style={{ color: PAPER }}>{row.type}</p>
-                        <p className="font-mono2 text-[13px] mt-0.5" style={{ color: MIST }}>{row.county}</p>
-                      </div>
-                      <div className="text-right shrink-0">
-                        <p className="font-mono2 text-base" style={{ color: BRASS }}>{row.multiple}</p>
-                        <p className="font-mono2 text-[12px] mt-0.5" style={{ color: GOOD_LIGHT }}>{row.status}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-                <div className="pointer-events-none absolute inset-x-0 top-0 h-10" style={{ background: `linear-gradient(to bottom, ${NAVY_LIGHT}, transparent)` }} />
-                <div className="pointer-events-none absolute inset-x-0 bottom-0 h-10" style={{ background: `linear-gradient(to top, ${NAVY_LIGHT}, transparent)` }} />
-              </div>
-            </div>
-            <p className="font-mono2 text-[13px] mt-3" style={{ color: MIST }}>{t.hero.ledgerNote}</p>
-          </div>
-        </div>
-      </section>
-
-      <section className="border-b bg-white" style={{ borderColor: "rgba(31,58,46,0.1)" }}>
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 py-10 grid grid-cols-2 lg:grid-cols-4 gap-8">
-          {t.stats.map((s) => (
-            <div key={s.label}>
-              <p className="font-display text-4xl lg:text-5xl" style={{ color: NAVY }}>{s.value}</p>
-              <p className="text-base mt-1.5" style={{ color: SLATE }}>{s.label}</p>
-            </div>
-          ))}
+          <PageArt variant="home" />
         </div>
       </section>
 
