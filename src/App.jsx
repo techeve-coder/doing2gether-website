@@ -95,6 +95,8 @@ const T = {
       ctaTitle: "Not seeing the right fit?", ctaCopy: "Tell us your budget and industry — we'll run a custom search.", ctaButton: "Start a buyer consultation",
       noListingsTitle: "New listings added regularly.",
       noListingsCopy: "We don't publish every opportunity — many are off-market. Tell us what you're looking for and we'll run a custom search, including businesses not listed here.",
+      externalSearchTitle: "In the meantime, browse active listings",
+      externalSearchCopy: "See what's currently for sale on BizBuySell, filtered to our service area.",
       labels: { asking: "Asking", downPmt: "Down Pmt.", financing: "Financing", grossRev: "Gross Rev.", sde: "SDE", ebitda: "EBITDA", years: "Years", employees: "Employees", leaseLeft: "Lease Left", roi: "ROI", payback: "Payback", cashOnCash: "Cash-on-Cash", dscr: "DSCR", profitability: "Profitability", risk: "Risk (lower is better)", scalability: "Scalability", ownerDependence: "Owner Dependence" },
     },
     sell: {
@@ -273,6 +275,8 @@ const T = {
       ctaTitle: "¿Aún no encuentra su negocio?", ctaCopy: "Cuéntenos su presupuesto e industria — haremos una búsqueda personalizada.", ctaButton: "Iniciar una consulta para compradores",
       noListingsTitle: "Agregamos nuevos listados regularmente.",
       noListingsCopy: "No publicamos cada oportunidad — muchas están fuera del mercado. Cuéntenos qué busca y haremos una búsqueda personalizada, incluyendo negocios que no aparecen aquí.",
+      externalSearchTitle: "Mientras tanto, vea listados activos",
+      externalSearchCopy: "Vea lo que está actualmente en venta en BizBuySell, filtrado a nuestra área de servicio.",
       labels: { asking: "Precio", downPmt: "Pago Inicial", financing: "Financiamiento", grossRev: "Ingresos Brutos", sde: "SDE", ebitda: "EBITDA", years: "Años", employees: "Empleados", leaseLeft: "Arrendamiento Restante", roi: "ROI", payback: "Recuperación", cashOnCash: "Retorno sobre Efectivo", dscr: "DSCR", profitability: "Rentabilidad", risk: "Riesgo (menor es mejor)", scalability: "Escalabilidad", ownerDependence: "Dependencia del Propietario" },
     },
     sell: {
@@ -1349,6 +1353,22 @@ function BuyPage({ onNavigate }) {
               <button onClick={() => onNavigate("contact")} className="inline-flex items-center gap-2 font-medium text-base px-6 py-3.5 rounded-sm mt-6 transition-colors" style={{ background: BRASS, color: NAVY }}>
                 {t.buy.ctaButton} <ArrowRight className="w-4 h-4" />
               </button>
+
+              <div className="mt-10 pt-8 border-t" style={{ borderColor: "rgba(31,58,46,0.12)" }}>
+                <h4 className="font-display text-lg" style={{ color: NAVY }}>{t.buy.externalSearchTitle}</h4>
+                <p className="text-sm mt-2" style={{ color: SLATE }}>{t.buy.externalSearchCopy}</p>
+                <div className="flex flex-wrap items-center justify-center gap-3 mt-5">
+                  <a href="https://www.bizbuysell.com/florida/miami-dade-county-businesses-for-sale/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-sm px-4 py-2 rounded-sm border transition-colors hover:border-[#B8963E]" style={{ borderColor: "rgba(31,58,46,0.2)", color: NAVY }}>
+                    Miami-Dade County <ArrowUpRight className="w-3.5 h-3.5" />
+                  </a>
+                  <a href="https://www.bizbuysell.com/florida/broward-county-businesses-for-sale/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-sm px-4 py-2 rounded-sm border transition-colors hover:border-[#B8963E]" style={{ borderColor: "rgba(31,58,46,0.2)", color: NAVY }}>
+                    Broward County <ArrowUpRight className="w-3.5 h-3.5" />
+                  </a>
+                  <a href="https://www.bizbuysell.com/florida/palm-beach-county-businesses-for-sale/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-sm px-4 py-2 rounded-sm border transition-colors hover:border-[#B8963E]" style={{ borderColor: "rgba(31,58,46,0.2)", color: NAVY }}>
+                    Palm Beach County <ArrowUpRight className="w-3.5 h-3.5" />
+                  </a>
+                </div>
+              </div>
             </div>
           )}
         </div>
