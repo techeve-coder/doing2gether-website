@@ -40,7 +40,7 @@ const T = {
     nav: {
       buy: ["Buy a", "Business"], sell: ["Sell a", "Business"], e2: ["E-2 Visa", "Center"],
       international: ["International", "Buyers"], services: "Services", resources: "Resources",
-      about: "About Us", contact: "Contact", schedule: "Schedule a consultation",
+      about: "About Us", contact: "Contact", schedule: "Schedule a consultation", whatsapp: "Chat with us",
     },
     hero: {
       eyebrow: "South Florida M&A Advisory & E-2 Visa Acquisitions",
@@ -220,7 +220,7 @@ const T = {
     nav: {
       buy: ["Comprar un", "Negocio"], sell: ["Vender un", "Negocio"], e2: ["Centro de", "Visa E-2"],
       international: ["Compradores", "Internacionales"], services: "Servicios", resources: "Recursos",
-      about: "Nosotros", contact: "Contacto", schedule: "Agendar una consulta",
+      about: "Nosotros", contact: "Contacto", schedule: "Agendar una consulta", whatsapp: "Chatea con nosotros",
     },
     hero: {
       eyebrow: "Asesoría de Fusiones y Adquisiciones y Visa E-2 en el Sur de Florida",
@@ -1079,18 +1079,20 @@ function Header({ page, onNavigate }) {
 }
 
 function WhatsAppButton() {
+  const { t } = useLang();
   return (
     <a
       href="https://wa.me/19548813999"
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Chat on WhatsApp"
-      className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-105"
+      aria-label={t.nav.whatsapp}
+      className="fixed bottom-6 right-6 z-50 flex items-center gap-2.5 pl-3.5 pr-5 py-3 rounded-full shadow-lg transition-transform hover:scale-105"
       style={{ background: "#25D366" }}
     >
-      <svg viewBox="0 0 32 32" width="30" height="30" fill="#FFFFFF" aria-hidden="true">
+      <svg viewBox="0 0 32 32" width="24" height="24" fill="#FFFFFF" aria-hidden="true" className="shrink-0">
         <path d="M16.001 3C9.096 3 3.5 8.596 3.5 15.5c0 2.42.687 4.68 1.879 6.6L3 29l7.09-2.34a12.44 12.44 0 0 0 5.911 1.508c6.905 0 12.5-5.596 12.5-12.5S22.906 3 16.001 3zm0 22.75c-1.933 0-3.75-.52-5.312-1.43l-.381-.226-4.207 1.388 1.38-4.1-.248-.395a10.19 10.19 0 0 1-1.58-5.487c0-5.663 4.605-10.268 10.35-10.268 5.744 0 10.349 4.605 10.349 10.268 0 5.664-4.605 10.25-10.351 10.25zm5.663-7.688c-.31-.155-1.834-.905-2.118-1.008-.284-.104-.491-.155-.698.155-.207.31-.802 1.008-.984 1.216-.181.207-.362.233-.673.078-.31-.155-1.31-.483-2.495-1.539-.923-.823-1.546-1.84-1.727-2.15-.181-.31-.02-.478.136-.633.14-.14.31-.362.465-.543.155-.181.207-.31.31-.517.104-.207.052-.388-.026-.543-.078-.155-.698-1.682-.957-2.303-.252-.605-.508-.523-.698-.533-.181-.008-.388-.01-.595-.01-.207 0-.543.078-.828.388-.284.31-1.086 1.062-1.086 2.589 0 1.527 1.112 3.003 1.267 3.21.155.207 2.19 3.343 5.306 4.688.741.32 1.319.511 1.77.654.744.237 1.42.204 1.955.124.596-.089 1.834-.75 2.093-1.474.259-.724.259-1.345.181-1.474-.077-.129-.284-.207-.594-.362z" />
       </svg>
+      <span className="text-sm font-medium text-white whitespace-nowrap">{t.nav.whatsapp}</span>
     </a>
   );
 }
@@ -2104,7 +2106,7 @@ export default function Doing2Gether() {
         )}
       </main>
       <Footer onNavigate={navigate} />
-      <WhatsAppButton />
+      {page !== "contact" && <WhatsAppButton />}
     </div>
     </LangContext.Provider>
   );
